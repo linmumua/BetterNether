@@ -1,0 +1,42 @@
+{
+  "name": "betternether:respawn_points/start",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 10,
+      "element": {
+        "location": "betternether:respawn_points/respawn_point_01",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "betternether:respawn_points/respawn_point_02",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 6,
+      "element": {
+        "location": "betternether:respawn_points/respawn_point_03",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "betternether:respawn_points/respawn_point_04",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 532488614,
+    "separation": 32,
+    "spacing": 80
+  },
+  "structures": [
+    {
+      "structure": "betternether:ghast_hive",
+      "weight": 1
+    }
+  ]
+}

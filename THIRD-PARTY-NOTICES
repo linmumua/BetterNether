@@ -1,0 +1,44 @@
+BetterNether — 第三方组件与许可声明
+=====================================
+
+本插件（dev.mumu.betternether）把 Fabric 模组「Better Nether」的世界内容重新实现为
+Paper/Folia 服务端插件。分发前请通读本文与随包的 LICENSE / LICENSE.ASSETS。
+
+1. BetterNether（上游模组）
+---------------------------
+项目：BetterNether
+作者：Team BetterX（主要作者 Quiqueck、paulevs 及多位贡献者）
+源码：https://github.com/quiqueck/BetterNether
+分支：release/26.3
+许可：MIT（见随包 LICENSE）
+
+本插件的数据包内容（23 个下界群系 JSON、结构模板与 NBT、方块/物品/树叶贴图与模型）
+派生自上述项目，按 MIT 条款保留原始版权与许可声明。
+
+2. 素材许可（重要）
+-------------------
+上游另有 LICENSE.ASSETS，对**部分**素材使用 CC BY-NC-SA 4.0：
+  https://creativecommons.org/licenses/by-nc-sa/4.0/
+要求署名「Team BetterX」，禁止商业使用，衍生作品须以相同许可分发。
+
+其中与本插件相关的典型条目包括语言文件与部分物品贴图。若本插件需要商业分发，
+必须先剔除 LICENSE.ASSETS 清单中列出的全部文件，或取得 Team BetterX 的单独授权。
+随包 LICENSE.ASSETS 为上游原文，未作删改。
+
+3. CraftEngine
+--------------
+项目：CraftEngine
+作者：MomiRealms
+用途：作为**运行期前置插件**提供自定义方块、物品、模型、语言与配方。
+许可：本插件不打包 CraftEngine 的任何代码或资源，仅在编译期引用其 API jar。
+使用者需自行遵守 CraftEngine 的许可条款。
+
+4. 服务端 API
+-------------
+Paper API / Folia API / MU核心 API：本插件仅编译期引用，运行期由服务端提供，不随包分发。
+SnakeYAML（Apache License 2.0）：随包分发并重定位到 dev.mumu.betternether.libs.yaml。
+
+5. 本插件自身
+-------------
+作者：linmumua
+许可：MIT（适配层代码）

@@ -1,0 +1,93 @@
+# BetterNether 文本消息（简体中文，MiniMessage 格式）。
+#
+# 所有以人类可读形式输出的文字都集中在这里：控制台行，以及游戏内命令的回复。
+# 值使用 MiniMessage 语法（<red>、<gradient:...>、<bold> 等），由服务端渲染。
+#
+# 与 config.yml 同一套升级规则：这里也带 config-version；插件更新新增的键会以默认值补上，
+# 你改过的值不会被覆盖，改动前旧文件会备份为 messages.yml.bak。
+#
+# 注意：MiniMessage 的标签名不能重复嵌套自定义前缀，所以每条消息都写全前缀。
+config-version: 1
+
+# ------------------------------------------------------------------------------
+# 插件生命周期
+# ------------------------------------------------------------------------------
+plugin:
+  # 启用成功时打印到控制台（方块与群系已就绪）。
+  enabled: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <green>已启用</green><gray>：</gray><white>下界地形、群系与矿物生成已就绪。</white>"
+  # 停用时打印到控制台。
+  disabled: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <gray>已停用；已取消后台任务，未落的文件写入不会被回滚。</gray>"
+
+# ------------------------------------------------------------------------------
+# 启动期拒绝启用 / 无法生成世界的原因。这些是运营者必须读懂的话，
+# 所以不使用迷惑性措辞：插件停用并不会阻止服务端生成世界，
+# Paper/Folia 会为指名 BetterNether 的世界回退原版生成器，把原版地形写进区域文件。
+# ------------------------------------------------------------------------------
+config:
+  # config.yml 无法读取或取值不可用：插件不会启用。
+  invalid: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <red>config.yml 无效，BetterNether 不可用；Paper/Folia 可能回退原版生成器，请停止服务器并修正 config.yml 后再生成世界（原文件保持不动）。</red>"
+
+craftengine:
+  # 找不到 / 未启用 CraftEngine 插件时。
+  missing: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <red>CraftEngine 是必需前置，但未找到或未启用；BetterNether 不可用，Paper/Folia 可能回退原版生成器，请停止服务器并修正后再生成世界。</red>"
+  # CraftEngine 已启用，但世界生成必需的方块仍未注册时（<missing> 为缺失项列表）。
+  not-ready: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <red>CraftEngine 尚未注册世界生成必需的方块（<missing>）；这通常意味着资源包未加载，或 CraftEngine 的 misc.delay-configuration-load 仍为 true。BetterNether 不可用，请停止服务器并修正后再生成世界。</red>"
+  # 上一行之后紧接着打印的修复指引：CE 的 betternether 资源包必须在启动前就位，容量变更只能靠完整重启消化。
+  not-ready-hint: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <yellow>修复指引：CraftEngine 的 betternether 资源包必须在启动前就位（</yellow><white>plugins/CraftEngine/resources/betternether/</white><yellow>），并把 CraftEngine 的 </yellow><white>misc.delay-configuration-load</white><yellow> 设为 </yellow><white>false</white><yellow> 后完整重启服务器；</yellow><white>/ce reload</white><yellow> 只适合让资源加载生效，方块容量变更必须完整重启。</yellow>"
+
+# ------------------------------------------------------------------------------
+# 帮助屏：/betternether 与 /betternether help 渲染完全一致。
+# 只有命令行那一行带点击事件，且是 suggest_command：点击只把命令填进输入框，不会直接执行。
+# 不要把它改成 run_command —— reload 会读写配置文件，必须由人按下回车。
+# ------------------------------------------------------------------------------
+help:
+  header: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <gray>可用命令</gray><dark_gray>（点击可直接填入输入框）</dark_gray><gray>：</gray>"
+  # <command> 为命令本身，点击行为由代码统一绑定。
+  row-reload: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <white><command></white> <gray>—— 重新读取 config.yml 与 messages.yml 并逐项报告哪些改动已生效、哪些必须重启世界生成。</gray>"
+  row-help: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <white><command></white> <gray>—— 显示本帮助。</gray>"
+  footer: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <gray>reload 权限：</gray><white>betternether.command.reload</white><gray>。提醒：</gray><white>读取配置</white><gray> ≠ </gray><white>重载资源包</white><gray> ≠ </gray><white>重新生成地形</white><gray>：资源包请用 CraftEngine 自己的重载命令，地形改动必须重启世界生成。</gray>"
+
+# ------------------------------------------------------------------------------
+# /betternether reload 的输出。逐项报告，绝不把「需要重启才生效」说成「已生效」，
+# 也绝不把「配置已读取」说成「资源包已重载」或「已生成的区块已更新」。
+#
+# 占位符：<keys> 为配置键列表，<reason> 为失败原因，<version> 为 config-version 世代号。
+# ------------------------------------------------------------------------------
+command:
+  # 命令在服务端命令列表里的描述。
+  description: "BetterNether：重新读取配置与文本，并报告哪些改动需要重启世界生成。"
+  reload:
+    # 已有一轮 reload 正在执行：不并发、不排队，让后来者稍后重试。
+    busy: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <yellow>已有一轮 reload 正在执行，请等它结束后再试；本次未做任何改动。</yellow>"
+    # 开始执行时的一行。
+    header: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <gray>开始重新读取 config.yml……</gray>"
+    # 配置项取值不可用（类型/范围错误）：什么都没生效。
+    invalid: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <red>config.yml 校验失败：<reason>。本次未应用任何改动，运行中的取值保持不变。</red>"
+    # 读不到 / 写不了文件：什么都没生效。
+    io-error: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <red>config.yml 读取失败：<reason>。本次未应用任何改动，运行中的取值保持不变。</red>"
+    # reload 意外中止（未预期的异常）。
+    failed: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <red>reload 意外中止：<reason>。</red><gray>已完成的部分不会自动撤回，请核对控制台记录后重试。</gray>"
+    # config.yml 不存在，已按内置默认重新写出（<version> 为内置文件的 config-version）。
+    config-released: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <green>config.yml 不存在，已写出内置默认文件</green><gray>（config-version <version>）。</gray>"
+    # 这次补上了缺失的键（<keys> 为键名列表）；你已设置的取值不会被改动。
+    keys-added: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <green>已补全缺失的配置键</green><gray>（你已有的取值保持不变）：</gray><white><keys></white>"
+    # 没有需要补全的键。
+    keys-none: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <gray>没有缺失的配置键；config.yml 已按当前文件校验通过。</gray>"
+    # 有 <count> 处取值不可用，已被替换成内置默认值（<keys> 列出具体条目）：
+    # 这些是你写了、但**没有按你写的生效**的项，所以本条出现时不会再打印「reload 完成」。
+    config-warnings: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <red>config.yml 中有 <count> 处取值不可用，已替换为内置默认值</red><gray>（你写的值没有生效）：</gray><white><keys></white>"
+    # messages.yml 也重新读取了，新文案立即生效。
+    messages-reloaded: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <green>messages.yml 已重新读取</green><gray>，新文案立即生效。</gray>"
+    # messages.yml 读取失败（<reason>）：沿用上一次成功读取的文案，不谎称已重新加载。
+    messages-failed: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <red>messages.yml 重新读取失败：<reason>。本次仍沿用上一次成功读取的文案。</red>"
+    # 无条件输出的一行：本命令不写资源包、也不触发 CraftEngine 重载。
+    ce-pack: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <gray>资源包：本次未执行释放。要重写 </gray><white>plugins/CraftEngine/resources/betternether/</white><gray>，请确认 CraftEngine 已启用。</gray>"
+    ce-pack-result: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <gray>资源包：</gray><white><result></white><gray>。文件已就位，但要让改动生效仍需执行 CraftEngine 自己的重载（例如 </gray><white>/ce reload</white><gray>）。</gray>"
+    # CraftEngine 当前仍未注册世界生成必需的方块：报告不能宣称资源已就绪。
+    ce-not-ready: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <red>CraftEngine 当前仍未注册世界生成必需的方块；此时新建世界可能回退原版生成器。请先用 CraftEngine 的重载命令让资源包生效。</red>"
+    # 世界生成参数有变化（<keys>）：已生成的地形不会变，必须重启世界生成。
+    restart-required: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <yellow>以下世界生成参数已改变：</yellow><white><keys></white><yellow>。已生成的地形与已存在的世界不会变化</yellow><gray>（新参数只用于此后新建的世界）；要让改动真正体现，请重启服务端并重新生成对应世界的区块。</gray>"
+    # 没有任何世界生成参数变化。
+    restart-none: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <gray>没有任何世界生成参数变化，本次无需重启世界生成。</gray>"
+    # 全部成功时的收尾行。
+    success: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <green>reload 完成</green><gray>：config.yml 与 messages.yml 已按上面的报告生效。</gray>"

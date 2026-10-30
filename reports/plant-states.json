@@ -1,0 +1,4065 @@
+{
+  "blocks": [
+    {
+      "id": "betternether:agave",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "age_0",
+          "models": [
+            "betternether:block/agave_3",
+            "betternether:block/agave_3",
+            "betternether:block/agave_3",
+            "betternether:block/agave_3"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      }
+    },
+    {
+      "id": "betternether:anchor_tree_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/anchor_tree_bark",
+            "betternether:block/anchor_tree_bark_2",
+            "betternether:block/anchor_tree_bark_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/anchor_tree_bark",
+            "betternether:block/anchor_tree_bark_2",
+            "betternether:block/anchor_tree_bark_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/anchor_tree_bark",
+            "betternether:block/anchor_tree_bark_2",
+            "betternether:block/anchor_tree_bark_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:anchor_tree_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/anchor_tree_log",
+            "betternether:block/anchor_tree_log_2",
+            "betternether:block/anchor_tree_log_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/anchor_tree_log",
+            "betternether:block/anchor_tree_log_2",
+            "betternether:block/anchor_tree_log_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/anchor_tree_log",
+            "betternether:block/anchor_tree_log_2",
+            "betternether:block/anchor_tree_log_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:anchor_tree_stripped_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/anchor_tree_stripped_bark",
+            "betternether:block/anchor_tree_stripped_bark_2",
+            "betternether:block/anchor_tree_stripped_bark_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/anchor_tree_stripped_bark",
+            "betternether:block/anchor_tree_stripped_bark_2",
+            "betternether:block/anchor_tree_stripped_bark_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/anchor_tree_stripped_bark",
+            "betternether:block/anchor_tree_stripped_bark_2",
+            "betternether:block/anchor_tree_stripped_bark_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:anchor_tree_stripped_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/anchor_tree_stripped_log",
+            "betternether:block/anchor_tree_stripped_log_2",
+            "betternether:block/anchor_tree_stripped_log_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/anchor_tree_stripped_log",
+            "betternether:block/anchor_tree_stripped_log_2",
+            "betternether:block/anchor_tree_stripped_log_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/anchor_tree_stripped_log",
+            "betternether:block/anchor_tree_stripped_log_2",
+            "betternether:block/anchor_tree_stripped_log_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:barrel_cactus",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "partial",
+      "fidelity": "上游 age0/1 empty；age2/3 0.0625..0.8125 细柱（15/16 宽）；chorus 10/16 比上游细 5/16",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "age_0",
+          "models": [
+            "betternether:block/barrel_cactus_4",
+            "betternether:block/barrel_cactus_4",
+            "betternether:block/barrel_cactus_4",
+            "betternether:block/barrel_cactus_4"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      }
+    },
+    {
+      "id": "betternether:basalt_stalactite",
+      "strategy": "slots",
+      "kind": "static",
+      "collision": "partial",
+      "fidelity": "上游 形状表里没有这个方块的 partial 记录：CE 没有对应的部分碰撞载体，按无碰撞落地",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "size_0",
+          "models": [
+            "betternether:block/basalt_stalactite_0"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 8,
+        "to": 1,
+        "dropped": [
+          "size_1",
+          "size_2",
+          "size_3",
+          "size_4",
+          "size_5",
+          "size_6",
+          "size_7"
+        ],
+        "redirect": {
+          "size_1": "size_0",
+          "size_2": "size_0",
+          "size_3": "size_0",
+          "size_4": "size_0",
+          "size_5": "size_0",
+          "size_6": "size_0",
+          "size_7": "size_0"
+        }
+      }
+    },
+    {
+      "id": "betternether:black_apple",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "age_0",
+          "models": [
+            "betternether:block/black_apple_seed"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      }
+    },
+    {
+      "id": "betternether:blackstone_stalactite",
+      "strategy": "slots",
+      "kind": "static",
+      "collision": "partial",
+      "fidelity": "上游 形状表里没有这个方块的 partial 记录：CE 没有对应的部分碰撞载体，按无碰撞落地",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "size_0",
+          "models": [
+            "betternether:block/blackstone_stalactite_0"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 8,
+        "to": 1,
+        "dropped": [
+          "size_1",
+          "size_2",
+          "size_3",
+          "size_4",
+          "size_5",
+          "size_6",
+          "size_7"
+        ],
+        "redirect": {
+          "size_1": "size_0",
+          "size_2": "size_0",
+          "size_3": "size_0",
+          "size_4": "size_0",
+          "size_5": "size_0",
+          "size_6": "size_0",
+          "size_7": "size_0"
+        }
+      }
+    },
+    {
+      "id": "betternether:blooming_vine",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "可爬：借可爬藤蔓组（原版 climbable），碰撞箱随载体",
+      "properties": [
+        {
+          "name": "bottom",
+          "type": "string",
+          "default": "false"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "bottom_false",
+          "models": [
+            "betternether:block/blooming_vine_false_0",
+            "betternether:block/blooming_vine_false_1",
+            "betternether:block/blooming_vine_false_2",
+            "betternether:block/blooming_vine_false_3",
+            "betternether:block/blooming_vine_false_4",
+            "betternether:block/blooming_vine_false_5"
+          ],
+          "pool": "weeping_vine",
+          "pinned_state": null
+        },
+        {
+          "name": "bottom_true",
+          "models": [
+            "betternether:block/blooming_vine_true_0",
+            "betternether:block/blooming_vine_true_1"
+          ],
+          "pool": "weeping_vine",
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "bottom=false",
+          "appearance": "bottom_false"
+        },
+        {
+          "key": "bottom=true",
+          "appearance": "bottom_true"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:bone_stalactite",
+      "strategy": "slots",
+      "kind": "static",
+      "collision": "partial",
+      "fidelity": "上游 形状表里没有这个方块的 partial 记录：CE 没有对应的部分碰撞载体，按无碰撞落地",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "size_0",
+          "models": [
+            "betternether:block/bone_stalactite_0"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 8,
+        "to": 1,
+        "dropped": [
+          "size_1",
+          "size_2",
+          "size_3",
+          "size_4",
+          "size_5",
+          "size_6",
+          "size_7"
+        ],
+        "redirect": {
+          "size_1": "size_0",
+          "size_2": "size_0",
+          "size_3": "size_0",
+          "size_4": "size_0",
+          "size_5": "size_0",
+          "size_6": "size_0",
+          "size_7": "size_0"
+        }
+      }
+    },
+    {
+      "id": "betternether:brown_large_mushroom",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "partial",
+      "fidelity": "上游 0.5..1 高的整面宽菌盖：CE 没有对应的部分碰撞载体，按无碰撞落地",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "shape_top",
+          "models": [
+            "betternether:block/brown_mushroom_top_center"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 11,
+        "to": 1,
+        "dropped": [
+          "shape_side_n",
+          "shape_side_s",
+          "shape_side_e",
+          "shape_side_w",
+          "shape_corner_n",
+          "shape_corner_s",
+          "shape_corner_e",
+          "shape_corner_w",
+          "shape_middle",
+          "shape_bottom"
+        ],
+        "redirect": {
+          "shape_side_n": "shape_top",
+          "shape_side_s": "shape_top",
+          "shape_side_e": "shape_top",
+          "shape_side_w": "shape_top",
+          "shape_corner_n": "shape_top",
+          "shape_corner_s": "shape_top",
+          "shape_corner_e": "shape_top",
+          "shape_corner_w": "shape_top",
+          "shape_middle": "shape_top",
+          "shape_bottom": "shape_top"
+        }
+      }
+    },
+    {
+      "id": "betternether:cincinnasite_bricks_pillar",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/cincinnasite_bricks_pillar"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/cincinnasite_bricks_pillar"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/cincinnasite_bricks_pillar"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:cincinnasite_pillar",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "shape",
+          "type": "string",
+          "default": "top"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "shape_top",
+          "models": [
+            "betternether:block/cincinnasite_pillar_top"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "shape_bottom",
+          "models": [
+            "betternether:block/cincinnasite_pillar_bottom"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "shape_middle",
+          "models": [
+            "betternether:block/cincinnasite_pillar_middle"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "shape_small",
+          "models": [
+            "betternether:block/cincinnasite_pillar_small"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "shape=top",
+          "appearance": "shape_top"
+        },
+        {
+          "key": "shape=bottom",
+          "appearance": "shape_bottom"
+        },
+        {
+          "key": "shape=middle",
+          "appearance": "shape_middle"
+        },
+        {
+          "key": "shape=small",
+          "appearance": "shape_small"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:egg_plant",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "destructed_false",
+          "models": [
+            "betternether:block/egg_plant_01",
+            "betternether:block/egg_plant_01",
+            "betternether:block/egg_plant_01",
+            "betternether:block/egg_plant_01",
+            "betternether:block/egg_plant_02",
+            "betternether:block/egg_plant_02",
+            "betternether:block/egg_plant_02",
+            "betternether:block/egg_plant_02",
+            "betternether:block/egg_plant_03",
+            "betternether:block/egg_plant_03",
+            "betternether:block/egg_plant_03",
+            "betternether:block/egg_plant_03"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 2,
+        "to": 1,
+        "dropped": [
+          "destructed_true"
+        ],
+        "redirect": {
+          "destructed_true": "destructed_false"
+        }
+      }
+    },
+    {
+      "id": "betternether:feather_fern",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "age_0",
+          "models": [
+            "betternether:block/feather_fern_3"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      }
+    },
+    {
+      "id": "betternether:giant_mold",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "partial",
+      "fidelity": "上游 0.125..0.875 全高 / 0.3125..0.6875 全高；chorus 10/16 与 12/16 差 2/16",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "shape_top",
+          "models": [
+            "betternether:block/giant_mold_top"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 3,
+        "to": 1,
+        "dropped": [
+          "shape_middle",
+          "shape_bottom"
+        ],
+        "redirect": {
+          "shape_middle": "shape_top",
+          "shape_bottom": "shape_top"
+        }
+      }
+    },
+    {
+      "id": "betternether:gloomsculk_crystal",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "facing_up",
+          "models": [
+            "betternether:block/gloomsculk_crystal",
+            "betternether:block/gloomsculk_crystal_b",
+            "betternether:block/gloomsculk_crystal_c"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 6,
+        "to": 1,
+        "dropped": [
+          "facing_down",
+          "facing_north",
+          "facing_south",
+          "facing_west",
+          "facing_east"
+        ],
+        "redirect": {
+          "facing_down": "facing_up",
+          "facing_north": "facing_up",
+          "facing_south": "facing_up",
+          "facing_west": "facing_up",
+          "facing_east": "facing_up"
+        }
+      }
+    },
+    {
+      "id": "betternether:gloomwisp_vine",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "shape_bottom_spent_false_vine_dir_east",
+          "models": [
+            "betternether:block/gloomwisp_vine_t4"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 12,
+        "to": 1,
+        "dropped": [
+          "shape_middle_spent_false_vine_dir_east",
+          "shape_top_spent_false_vine_dir_east",
+          "shape_top_spent_true_vine_dir_east",
+          "shape_top_spent_false_vine_dir_north",
+          "shape_top_spent_true_vine_dir_north",
+          "shape_top_spent_false_vine_dir_random",
+          "shape_top_spent_true_vine_dir_random",
+          "shape_top_spent_false_vine_dir_south",
+          "shape_top_spent_true_vine_dir_south",
+          "shape_top_spent_false_vine_dir_west",
+          "shape_top_spent_true_vine_dir_west"
+        ],
+        "redirect": {
+          "shape_middle_spent_false_vine_dir_east": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_false_vine_dir_east": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_true_vine_dir_east": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_false_vine_dir_north": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_true_vine_dir_north": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_false_vine_dir_random": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_true_vine_dir_random": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_false_vine_dir_south": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_true_vine_dir_south": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_false_vine_dir_west": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_true_vine_dir_west": "shape_bottom_spent_false_vine_dir_east"
+        }
+      }
+    },
+    {
+      "id": "betternether:gloomwood_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/gloomwood_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/gloomwood_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/gloomwood_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:gloomwood_dark_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/gloomwood_dark_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/gloomwood_dark_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/gloomwood_dark_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:gloomwood_dark_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/gloomwood_dark_log_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/gloomwood_dark_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/gloomwood_dark_log_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:gloomwood_dark_molten_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/gloomwood_dark_molten_log_horizontal",
+            "betternether:block/gloomwood_dark_molten_log_1_horizontal",
+            "betternether:block/gloomwood_dark_molten_log_2_horizontal",
+            "betternether:block/gloomwood_dark_molten_log_3_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/gloomwood_dark_molten_log",
+            "betternether:block/gloomwood_dark_molten_log_1",
+            "betternether:block/gloomwood_dark_molten_log_2",
+            "betternether:block/gloomwood_dark_molten_log_3"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/gloomwood_dark_molten_log_horizontal",
+            "betternether:block/gloomwood_dark_molten_log_1_horizontal",
+            "betternether:block/gloomwood_dark_molten_log_2_horizontal",
+            "betternether:block/gloomwood_dark_molten_log_3_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:gloomwood_dark_stripped_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/gloomwood_dark_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/gloomwood_dark_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/gloomwood_dark_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:gloomwood_dark_stripped_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/gloomwood_dark_stripped_log_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/gloomwood_dark_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/gloomwood_dark_stripped_log_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:gloomwood_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/gloomwood_log_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/gloomwood_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/gloomwood_log_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:gloomwood_stripped_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/gloomwood_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/gloomwood_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/gloomwood_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:gloomwood_stripped_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/gloomwood_stripped_log_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/gloomwood_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/gloomwood_stripped_log_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:gloomwood_transition_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/gloomwood_transition_log_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/gloomwood_transition_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/gloomwood_transition_log_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:gloomwood_transition_stripped_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/gloomwood_transition_stripped_log_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/gloomwood_transition_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/gloomwood_transition_stripped_log_horizontal"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:glowstone_stalactite",
+      "strategy": "slots",
+      "kind": "static",
+      "collision": "partial",
+      "fidelity": "上游 形状表里没有这个方块的 partial 记录：CE 没有对应的部分碰撞载体，按无碰撞落地",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "size_0",
+          "models": [
+            "betternether:block/glowstone_stalactite_0"
+          ],
+          "pool": "pressure_plate",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 8,
+        "to": 1,
+        "dropped": [
+          "size_1",
+          "size_2",
+          "size_3",
+          "size_4",
+          "size_5",
+          "size_6",
+          "size_7"
+        ],
+        "redirect": {
+          "size_1": "size_0",
+          "size_2": "size_0",
+          "size_3": "size_0",
+          "size_4": "size_0",
+          "size_5": "size_0",
+          "size_6": "size_0",
+          "size_7": "size_0"
+        }
+      }
+    },
+    {
+      "id": "betternether:golden_vine",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "可爬：借可爬藤蔓组（原版 climbable），碰撞箱随载体",
+      "properties": [
+        {
+          "name": "bottom",
+          "type": "string",
+          "default": "false"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "bottom_false",
+          "models": [
+            "betternether:block/golden_vine_false_0",
+            "betternether:block/golden_vine_false_1"
+          ],
+          "pool": "weeping_vine",
+          "pinned_state": null
+        },
+        {
+          "name": "bottom_true",
+          "models": [
+            "betternether:block/golden_vine_true_0",
+            "betternether:block/golden_vine_true_1"
+          ],
+          "pool": "weeping_vine",
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "bottom=false",
+          "appearance": "bottom_false"
+        },
+        {
+          "key": "bottom=true",
+          "appearance": "bottom_true"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:ink_bush",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "age_0",
+          "models": [
+            "betternether:block/ink_bush_0"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      }
+    },
+    {
+      "id": "betternether:jellyfish_mushroom",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "partial",
+      "fidelity": "上游 0.0625..0.9375 × 0..1（14/16 全高柱）：CE 没有对应的部分碰撞载体，按无碰撞落地",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "shape_top_visual_normal",
+          "models": [
+            "betternether:block/jellyfish_mushroom_top"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 9,
+        "to": 1,
+        "dropped": [
+          "shape_top_visual_sepia",
+          "shape_top_visual_poor",
+          "shape_middle_visual_normal",
+          "shape_middle_visual_sepia",
+          "shape_middle_visual_poor",
+          "shape_bottom_visual_normal",
+          "shape_bottom_visual_sepia",
+          "shape_bottom_visual_poor"
+        ],
+        "redirect": {
+          "shape_top_visual_sepia": "shape_top_visual_normal",
+          "shape_top_visual_poor": "shape_top_visual_normal",
+          "shape_middle_visual_normal": "shape_top_visual_normal",
+          "shape_middle_visual_sepia": "shape_top_visual_normal",
+          "shape_middle_visual_poor": "shape_top_visual_normal",
+          "shape_bottom_visual_normal": "shape_top_visual_normal",
+          "shape_bottom_visual_sepia": "shape_top_visual_normal",
+          "shape_bottom_visual_poor": "shape_top_visual_normal"
+        }
+      }
+    },
+    {
+      "id": "betternether:jungle_moss",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "facing_north",
+          "models": [
+            "betternether:block/jungle_moss_1",
+            "betternether:block/jungle_moss_2",
+            "betternether:block/jungle_moss_3",
+            "betternether:block/jungle_moss_4",
+            "betternether:block/jungle_moss_5",
+            "betternether:block/jungle_moss_6"
+          ],
+          "pool": "pressure_plate",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "facing_south",
+          "facing_east",
+          "facing_west"
+        ],
+        "redirect": {
+          "facing_south": "facing_north",
+          "facing_east": "facing_north",
+          "facing_west": "facing_north"
+        }
+      }
+    },
+    {
+      "id": "betternether:lumabus_vine",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "可爬：借可爬藤蔓组（原版 climbable），碰撞箱随载体",
+      "properties": [
+        {
+          "name": "shape",
+          "type": "string",
+          "default": "bottom"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "shape_bottom",
+          "models": [
+            "betternether:block/lumabus_bulb_1",
+            "betternether:block/lumabus_vine_t0",
+            "betternether:block/lumabus_vine_t1",
+            "betternether:block/lumabus_vine_t2"
+          ],
+          "pool": "weeping_vine",
+          "pinned_state": null
+        },
+        {
+          "name": "shape_middle",
+          "models": [
+            "betternether:block/lumabus_vine",
+            "betternether:block/lumabus_vine_mirrored"
+          ],
+          "pool": "weeping_vine",
+          "pinned_state": null
+        },
+        {
+          "name": "shape_top",
+          "models": [
+            "betternether:block/lumabus_roots"
+          ],
+          "pool": "weeping_vine",
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "shape=bottom",
+          "appearance": "shape_bottom"
+        },
+        {
+          "key": "shape=middle",
+          "appearance": "shape_middle"
+        },
+        {
+          "key": "shape=top",
+          "appearance": "shape_top"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:magma_flower",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "age_0",
+          "models": [
+            "betternether:block/magma_flower_04",
+            "betternether:block/magma_flower_04",
+            "betternether:block/magma_flower_04",
+            "betternether:block/magma_flower_04"
+          ],
+          "pool": "pressure_plate",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      }
+    },
+    {
+      "id": "betternether:mushroom_fir_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/mushroom_fir_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/mushroom_fir_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/mushroom_fir_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:mushroom_fir_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/mushroom_fir_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/mushroom_fir_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/mushroom_fir_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:mushroom_fir_stripped_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/mushroom_fir_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/mushroom_fir_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/mushroom_fir_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:mushroom_fir_stripped_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/mushroom_fir_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/mushroom_fir_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/mushroom_fir_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:mushroom_fir_trunk",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "partial",
+      "fidelity": "上游 0.25..0.75 柱 + 半格枝头 / 满格菌盖；只近似柱身；枝头与菌盖无对应载体",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "shape_bottom",
+          "models": [
+            "betternether:block/mushroom_fir_trunk_bottom",
+            "betternether:block/mushroom_fir_trunk_bottom",
+            "betternether:block/mushroom_fir_trunk_bottom",
+            "betternether:block/mushroom_fir_trunk_bottom"
+          ],
+          "pool": "pressure_plate",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 12,
+        "to": 1,
+        "dropped": [
+          "shape_middle",
+          "shape_top",
+          "shape_side_big_n",
+          "shape_side_big_s",
+          "shape_side_big_e",
+          "shape_side_big_w",
+          "shape_side_small_n",
+          "shape_side_small_s",
+          "shape_side_small_e",
+          "shape_side_small_w",
+          "shape_end"
+        ],
+        "redirect": {
+          "shape_middle": "shape_bottom",
+          "shape_top": "shape_bottom",
+          "shape_side_big_n": "shape_bottom",
+          "shape_side_big_s": "shape_bottom",
+          "shape_side_big_e": "shape_bottom",
+          "shape_side_big_w": "shape_bottom",
+          "shape_side_small_n": "shape_bottom",
+          "shape_side_small_s": "shape_bottom",
+          "shape_side_small_e": "shape_bottom",
+          "shape_side_small_w": "shape_bottom",
+          "shape_end": "shape_bottom"
+        }
+      }
+    },
+    {
+      "id": "betternether:nether_cactus",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "partial",
+      "fidelity": "上游 0.0625..0.9375 × 0..1 / 0.25..0.75 × 0..0.5；chorus 10/16 比上游 15/16 细 5/16",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "top_false",
+          "models": [
+            "betternether:block/nether_cactus_middle"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 2,
+        "to": 1,
+        "dropped": [
+          "top_true"
+        ],
+        "redirect": {
+          "top_true": "top_false"
+        }
+      }
+    },
+    {
+      "id": "betternether:nether_mushroom_stem",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "partial",
+      "fidelity": "上游 axis 三态 6/16 细柱；chorus 无 axis：横放时碰撞箱仍竖直，且比上游粗 4/16",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/nether_mushroom_stem"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/nether_mushroom_stem"
+          ],
+          "pool": "pressure_plate",
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/nether_mushroom_stem"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:nether_mycelium",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "blue",
+          "type": "string",
+          "default": "false"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "blue_false",
+          "models": [
+            "betternether:block/nether_mycelium",
+            "betternether:block/nether_mycelium",
+            "betternether:block/nether_mycelium",
+            "betternether:block/nether_mycelium"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "blue_true",
+          "models": [
+            "betternether:block/nether_mycelium_blue",
+            "betternether:block/nether_mycelium_blue",
+            "betternether:block/nether_mycelium_blue",
+            "betternether:block/nether_mycelium_blue"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "blue=false",
+          "appearance": "blue_false"
+        },
+        {
+          "key": "blue=true",
+          "appearance": "blue_true"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:nether_reed_planks",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/nether_reed_planks"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/nether_reed_planks"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/nether_reed_planks"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:nether_reed_stem",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "top_false",
+          "models": [
+            "betternether:block/nether_reed_stem_false"
+          ],
+          "pool": "pressure_plate",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 2,
+        "to": 1,
+        "dropped": [
+          "top_true"
+        ],
+        "redirect": {
+          "top_true": "top_false"
+        }
+      }
+    },
+    {
+      "id": "betternether:nether_sakura_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/nether_sakura_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/nether_sakura_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/nether_sakura_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:nether_sakura_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/nether_sakura_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/nether_sakura_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/nether_sakura_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:nether_sakura_stripped_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/nether_sakura_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/nether_sakura_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/nether_sakura_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:nether_sakura_stripped_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/nether_sakura_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/nether_sakura_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/nether_sakura_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:netherrack_stalactite",
+      "strategy": "slots",
+      "kind": "static",
+      "collision": "partial",
+      "fidelity": "上游 形状表里没有这个方块的 partial 记录：CE 没有对应的部分碰撞载体，按无碰撞落地",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "size_0",
+          "models": [
+            "betternether:block/stalactite_0"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 8,
+        "to": 1,
+        "dropped": [
+          "size_1",
+          "size_2",
+          "size_3",
+          "size_4",
+          "size_5",
+          "size_6",
+          "size_7"
+        ],
+        "redirect": {
+          "size_1": "size_0",
+          "size_2": "size_0",
+          "size_3": "size_0",
+          "size_4": "size_0",
+          "size_5": "size_0",
+          "size_6": "size_0",
+          "size_7": "size_0"
+        }
+      }
+    },
+    {
+      "id": "betternether:orange_mushroom",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "age_0",
+          "models": [
+            "betternether:block/orange_mushroom_04",
+            "betternether:block/orange_mushroom_04",
+            "betternether:block/orange_mushroom_04",
+            "betternether:block/orange_mushroom_04"
+          ],
+          "pool": "pressure_plate",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      }
+    },
+    {
+      "id": "betternether:red_large_mushroom",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "partial",
+      "fidelity": "上游 0.5..1 高的整面宽菌盖：CE 没有对应的部分碰撞载体，按无碰撞落地",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "shape_top",
+          "models": [
+            "betternether:block/red_mushroom_top"
+          ],
+          "pool": "pressure_plate",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 3,
+        "to": 1,
+        "dropped": [
+          "shape_middle",
+          "shape_bottom"
+        ],
+        "redirect": {
+          "shape_middle": "shape_top",
+          "shape_bottom": "shape_top"
+        }
+      }
+    },
+    {
+      "id": "betternether:rubeus_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        },
+        {
+          "name": "shape",
+          "type": "string",
+          "default": "bottom"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x_shape_bottom",
+          "models": [
+            "betternether:block/rubeus_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x_shape_middle",
+          "models": [
+            "betternether:block/rubeus_bark_blend"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x_shape_top",
+          "models": [
+            "betternether:block/rubeus_bark_top"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y_shape_bottom",
+          "models": [
+            "betternether:block/rubeus_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y_shape_middle",
+          "models": [
+            "betternether:block/rubeus_bark_blend"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y_shape_top",
+          "models": [
+            "betternether:block/rubeus_bark_top"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z_shape_bottom",
+          "models": [
+            "betternether:block/rubeus_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z_shape_middle",
+          "models": [
+            "betternether:block/rubeus_bark_blend"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z_shape_top",
+          "models": [
+            "betternether:block/rubeus_bark_top"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x,shape=bottom",
+          "appearance": "axis_x_shape_bottom"
+        },
+        {
+          "key": "axis=x,shape=middle",
+          "appearance": "axis_x_shape_middle"
+        },
+        {
+          "key": "axis=x,shape=top",
+          "appearance": "axis_x_shape_top"
+        },
+        {
+          "key": "axis=y,shape=bottom",
+          "appearance": "axis_y_shape_bottom"
+        },
+        {
+          "key": "axis=y,shape=middle",
+          "appearance": "axis_y_shape_middle"
+        },
+        {
+          "key": "axis=y,shape=top",
+          "appearance": "axis_y_shape_top"
+        },
+        {
+          "key": "axis=z,shape=bottom",
+          "appearance": "axis_z_shape_bottom"
+        },
+        {
+          "key": "axis=z,shape=middle",
+          "appearance": "axis_z_shape_middle"
+        },
+        {
+          "key": "axis=z,shape=top",
+          "appearance": "axis_z_shape_top"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:rubeus_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        },
+        {
+          "name": "shape",
+          "type": "string",
+          "default": "bottom"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x_shape_bottom",
+          "models": [
+            "betternether:block/rubeus_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x_shape_middle",
+          "models": [
+            "betternether:block/rubeus_log_blend"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x_shape_top",
+          "models": [
+            "betternether:block/rubeus_log_top"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y_shape_bottom",
+          "models": [
+            "betternether:block/rubeus_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y_shape_middle",
+          "models": [
+            "betternether:block/rubeus_log_blend"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y_shape_top",
+          "models": [
+            "betternether:block/rubeus_log_top"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z_shape_bottom",
+          "models": [
+            "betternether:block/rubeus_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z_shape_middle",
+          "models": [
+            "betternether:block/rubeus_log_blend"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z_shape_top",
+          "models": [
+            "betternether:block/rubeus_log_top"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x,shape=bottom",
+          "appearance": "axis_x_shape_bottom"
+        },
+        {
+          "key": "axis=x,shape=middle",
+          "appearance": "axis_x_shape_middle"
+        },
+        {
+          "key": "axis=x,shape=top",
+          "appearance": "axis_x_shape_top"
+        },
+        {
+          "key": "axis=y,shape=bottom",
+          "appearance": "axis_y_shape_bottom"
+        },
+        {
+          "key": "axis=y,shape=middle",
+          "appearance": "axis_y_shape_middle"
+        },
+        {
+          "key": "axis=y,shape=top",
+          "appearance": "axis_y_shape_top"
+        },
+        {
+          "key": "axis=z,shape=bottom",
+          "appearance": "axis_z_shape_bottom"
+        },
+        {
+          "key": "axis=z,shape=middle",
+          "appearance": "axis_z_shape_middle"
+        },
+        {
+          "key": "axis=z,shape=top",
+          "appearance": "axis_z_shape_top"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:rubeus_stripped_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/rubeus_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/rubeus_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/rubeus_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:rubeus_stripped_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/rubeus_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/rubeus_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/rubeus_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:stalagnate_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/stalagnate_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/stalagnate_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/stalagnate_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:stalagnate_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/stalagnate_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/stalagnate_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/stalagnate_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:stalagnate_stem",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "partial",
+      "fidelity": "上游 axis 三态 6/16 细柱；chorus 无 axis：横放时碰撞箱仍竖直，且比上游粗 4/16",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/stalagnate_stem_1",
+            "betternether:block/stalagnate_stem_3"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/stalagnate_stem_1",
+            "betternether:block/stalagnate_stem_3"
+          ],
+          "pool": "pressure_plate",
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/stalagnate_stem_1",
+            "betternether:block/stalagnate_stem_3"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:stalagnate_stripped_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/stalagnate_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/stalagnate_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/stalagnate_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:stalagnate_stripped_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/stalagnate_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/stalagnate_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/stalagnate_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:wall_moss",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "facing_north",
+          "models": [
+            "betternether:block/wall_moss_1",
+            "betternether:block/wall_moss_2",
+            "betternether:block/wall_moss_3"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "facing_south",
+          "facing_east",
+          "facing_west"
+        ],
+        "redirect": {
+          "facing_south": "facing_north",
+          "facing_east": "facing_north",
+          "facing_west": "facing_north"
+        }
+      }
+    },
+    {
+      "id": "betternether:wall_mushroom_brown",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "facing_north",
+          "models": [
+            "betternether:block/wall_mushrooms_brown_1",
+            "betternether:block/wall_mushrooms_brown_2",
+            "betternether:block/wall_mushrooms_brown_3"
+          ],
+          "pool": "pressure_plate",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "facing_south",
+          "facing_east",
+          "facing_west"
+        ],
+        "redirect": {
+          "facing_south": "facing_north",
+          "facing_east": "facing_north",
+          "facing_west": "facing_north"
+        }
+      }
+    },
+    {
+      "id": "betternether:wall_mushroom_red",
+      "strategy": "slots",
+      "kind": "plant",
+      "collision": "empty",
+      "fidelity": "",
+      "properties": [],
+      "appearances": [
+        {
+          "name": "facing_north",
+          "models": [
+            "betternether:block/wall_mushrooms_red_1_ce",
+            "betternether:block/wall_mushrooms_red_2_ce"
+          ],
+          "pool": "tripwire",
+          "pinned_state": null
+        }
+      ],
+      "variants": [],
+      "dropped": [],
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "facing_south",
+          "facing_east",
+          "facing_west"
+        ],
+        "redirect": {
+          "facing_south": "facing_north",
+          "facing_east": "facing_north",
+          "facing_west": "facing_north"
+        }
+      }
+    },
+    {
+      "id": "betternether:wart_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/wart_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/wart_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/wart_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:wart_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/wart_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/wart_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/wart_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:wart_stripped_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/wart_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/wart_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/wart_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:wart_stripped_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/wart_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/wart_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/wart_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:whispering_gourd_lantern",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "facing",
+          "type": "horizontal_direction",
+          "default": "north"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "facing_north",
+          "models": [
+            "betternether:block/whispering_gourd_lantern"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "facing_south",
+          "models": [
+            "betternether:block/whispering_gourd_lantern"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "facing_west",
+          "models": [
+            "betternether:block/whispering_gourd_lantern"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "facing_east",
+          "models": [
+            "betternether:block/whispering_gourd_lantern"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "facing=north",
+          "appearance": "facing_north"
+        },
+        {
+          "key": "facing=south",
+          "appearance": "facing_south"
+        },
+        {
+          "key": "facing=west",
+          "appearance": "facing_west"
+        },
+        {
+          "key": "facing=east",
+          "appearance": "facing_east"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:willow_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/willow_bark",
+            "betternether:block/willow_bark_2"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/willow_bark",
+            "betternether:block/willow_bark_2"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/willow_bark",
+            "betternether:block/willow_bark_2"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:willow_leaves",
+      "strategy": "pooled",
+      "kind": "cutout",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "facing",
+          "type": "direction",
+          "default": "north"
+        },
+        {
+          "name": "natural",
+          "type": "string",
+          "default": "true"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "facing_north_natural_true",
+          "models": [
+            "betternether:block/willow_leaves_side"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "facing_south_natural_true",
+          "models": [
+            "betternether:block/willow_leaves_side"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "facing_east_natural_true",
+          "models": [
+            "betternether:block/willow_leaves_side"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "facing_west_natural_true",
+          "models": [
+            "betternether:block/willow_leaves_side"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "facing_up_natural_true",
+          "models": [
+            "betternether:block/willow_leaves_top"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "facing_down_natural_true",
+          "models": [
+            "betternether:block/willow_leaves_bottom"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "natural_false",
+          "models": [
+            "betternether:block/willow_leaves"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "facing=north",
+          "appearance": "facing_north_natural_true"
+        },
+        {
+          "key": "facing=south",
+          "appearance": "facing_south_natural_true"
+        },
+        {
+          "key": "facing=east",
+          "appearance": "facing_east_natural_true"
+        },
+        {
+          "key": "facing=west",
+          "appearance": "facing_west_natural_true"
+        },
+        {
+          "key": "facing=up",
+          "appearance": "facing_up_natural_true"
+        },
+        {
+          "key": "facing=down",
+          "appearance": "facing_down_natural_true"
+        },
+        {
+          "key": "natural=false",
+          "appearance": "natural_false"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:willow_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/willow_log",
+            "betternether:block/willow_log_2"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/willow_log",
+            "betternether:block/willow_log_2"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/willow_log",
+            "betternether:block/willow_log_2"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        },
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:willow_stripped_bark",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/willow_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/willow_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/willow_stripped_bark"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    },
+    {
+      "id": "betternether:willow_stripped_log",
+      "strategy": "pooled",
+      "kind": "solid",
+      "collision": "unknown",
+      "fidelity": "形状表里查不到这个方块的碰撞档位，按无碰撞落地",
+      "properties": [
+        {
+          "name": "axis",
+          "type": "axis",
+          "default": "y"
+        }
+      ],
+      "appearances": [
+        {
+          "name": "axis_y",
+          "models": [
+            "betternether:block/willow_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_z",
+          "models": [
+            "betternether:block/willow_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        },
+        {
+          "name": "axis_x",
+          "models": [
+            "betternether:block/willow_stripped_log"
+          ],
+          "pool": null,
+          "pinned_state": null
+        }
+      ],
+      "variants": [
+        {
+          "key": "axis=y",
+          "appearance": "axis_y"
+        },
+        {
+          "key": "axis=z",
+          "appearance": "axis_z"
+        },
+        {
+          "key": "axis=x",
+          "appearance": "axis_x"
+        }
+      ],
+      "dropped": [],
+      "appearances_merged": null
+    }
+  ]
+}

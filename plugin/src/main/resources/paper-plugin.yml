@@ -1,0 +1,77 @@
+# The only plugin descriptor. Only paper-plugin.yml can declare a bootstrapper
+# (PluginFileType.java:28-45), and only a bootstrapper can register the biome datapack early enough
+# for the worldgen registries (LifecycleEvents.java:42). PluginFileType.guessType iterates
+# List.of(PAPER, SPIGOT) and returns the FIRST match (:47, :59-68), so a plugin.yml beside this file
+# would never be read - it was deleted rather than left as a trap for whoever edits it next.
+# This plugin cannot run on plain Spigot regardless: it needs Paper's BiomeProvider, the lifecycle
+# datapack API and the worldgen registry access.
+#
+# `folia-supported` is a Folia-only key: it is absent from Paper's own PaperPluginMeta and declares
+# no such field. Keeping it here is still correct: PaperPluginMeta.create() deserializes with a plain
+# Configurate ObjectMapper, which binds the fields it declares and ignores every other node. So Paper
+# ignores this line and Folia reads it; without it Folia refuses to load the plugin at all.
+name: BetterNether
+version: '${version}'
+description: >-
+  Folia 26.3 服务端插件：把「Better Nether」模组的下界地形、23 个下界群系、矿物、1x1 方块与植被
+  移植到 Paper/Folia，并迁移 Nether City 等下界结构；所有方块、物品、模型与翻译由 CraftEngine 提供。
+  原「Better Nether」模组由 Team BetterX 创作。
+# `authors` / `contributors` 都是 PaperPluginMeta 的真实字段（PaperPluginMeta.java:58-59），均为普通列表。
+# Paper 会把旧式单数 `author` 追加进 `authors`（PaperPluginMeta.java:122-127），故此处不使用该旧键。
+authors:
+  - linmumua
+contributors:
+  # 原始「Better Nether」模组（Team BetterX）作者与贡献者
+  - Quiqueck
+  - paulevs
+  - Bulldog83
+  - Edos
+  - Yuki
+  - Seaward
+  - Firel
+# 源码来源（仅作署名说明，不是本项目的官网）：
+#   Better Nether 模组源码：https://github.com/quiqueck/BetterNether
+main: dev.mumu.betternether.BetterNetherPlugin
+bootstrapper: dev.mumu.betternether.biome.NetherDatapack
+api-version: '26.3'
+load: STARTUP
+folia-supported: true
+# The reload node is declared here so it is a real, assignable permission rather than one that falls
+# through to the server's `permissions.default-permission` setting.
+permissions:
+  betternether.command.reload:
+    description: 允许使用 /betternether reload 重载文本与可热更配置
+    default: op
+# 命令在代码里通过 LifecycleEvents.COMMANDS 注册：PaperPluginMeta 根本不声明 commands 字段
+# （name, main, bootstrapper, loader, provides, version, description, authors, contributors,
+#  website, prefix, load, api-version, folia-supported, dependencies -- 这就是全部字段），
+# 所以描述符里写 commands: 会被静默忽略。
+dependencies:
+  # CraftEngine must be enabled before us: our onLoad flips its immediate-load flag and installs the
+  # resource pack before it reads its own settings.
+  server:
+    CraftEngine:
+      load: BEFORE
+      required: true
+      join-classpath: true
+  # CraftEngine must also be a BOOTSTRAP dependency, and load BEFORE ours.
+  #
+  # BN's bootstrapper (NetherDatapack) raises CraftEngine's in-memory block capacity, and its
+  # DATAPACK_DISCOVERY handler runs before CraftEngine's own -- but for that handler to even resolve
+  # CraftEngine's classes it must see them during the bootstrap phase. Paper builds the bootstrap
+  # phase's dependency graph from this section ONLY
+  # (BootstrapProviderStorage.createDependencyTree() returns a BootstrapMetaDependencyTree, whose
+  # registerDependencies adds edges solely from PaperPluginMeta.getBootstrapDependencies()), and BN's
+  # classloader includes CraftEngine's only when it is a transitive dependency in that graph
+  # (PaperPluginClassLoader.refreshClassloaderDependencyTree -> DependencyContext.isTransitiveDependency).
+  # Without this entry the bootstrapper would see a DIFFERENT / absent CraftEngine class and the
+  # capacity write would fail its read-back check.
+  #
+  # load: BEFORE makes CraftEngine's bootstrapper run first, so its Config is already loaded
+  # (PaperCraftEngineBootstrap.bootstrap calls CraftEngine.setUpConfigAndLocale, which constructs the
+  # Config and calls loadFullSettings) by the time ours runs.
+  bootstrap:
+    CraftEngine:
+      load: BEFORE
+      required: true
+      join-classpath: true

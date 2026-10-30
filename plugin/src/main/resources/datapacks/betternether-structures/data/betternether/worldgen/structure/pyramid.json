@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "#betternether:has_structure/pyramid",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none",
+  "start_pool": "betternether:pyramid/start",
+  "size": 1,
+  "start_height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+      "absolute": 31
+    },
+    "max_inclusive": {
+      "absolute": 32
+    }
+  },
+  "max_distance_from_center": 96,
+  "use_expansion_hack": false
+}

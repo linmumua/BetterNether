@@ -1,0 +1,2066 @@
+{
+  "blocks": [
+    {
+      "id": "betternether:agave",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 4,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:barrel_cactus",
+      "collision": "partial",
+      "family": [
+        "chorus",
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 4,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      },
+      "match": "approximate",
+      "fidelity": "上游 age0/1 empty；age2/3 0.0625..0.8125 细柱（15/16 宽）；chorus 10/16 比上游细 5/16"
+    },
+    {
+      "id": "betternether:basalt_stalactite",
+      "collision": "partial",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 8,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 8,
+        "to": 1,
+        "dropped": [
+          "size_1",
+          "size_2",
+          "size_3",
+          "size_4",
+          "size_5",
+          "size_6",
+          "size_7"
+        ],
+        "redirect": {
+          "size_1": "size_0",
+          "size_2": "size_0",
+          "size_3": "size_0",
+          "size_4": "size_0",
+          "size_5": "size_0",
+          "size_6": "size_0",
+          "size_7": "size_0"
+        }
+      },
+      "match": "approximate",
+      "fidelity": "上游 形状表里没有这个方块的 partial 记录：CE 没有对应的部分碰撞载体，按无碰撞落地"
+    },
+    {
+      "id": "betternether:black_apple",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 4,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:black_bush",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:blackstone_stalactite",
+      "collision": "partial",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 8,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 8,
+        "to": 1,
+        "dropped": [
+          "size_1",
+          "size_2",
+          "size_3",
+          "size_4",
+          "size_5",
+          "size_6",
+          "size_7"
+        ],
+        "redirect": {
+          "size_1": "size_0",
+          "size_2": "size_0",
+          "size_3": "size_0",
+          "size_4": "size_0",
+          "size_5": "size_0",
+          "size_6": "size_0",
+          "size_7": "size_0"
+        }
+      },
+      "match": "approximate",
+      "fidelity": "上游 形状表里没有这个方块的 partial 记录：CE 没有对应的部分碰撞载体，按无碰撞落地"
+    },
+    {
+      "id": "betternether:blooming_vine",
+      "collision": "empty",
+      "family": [
+        "cave_vine",
+        "weeping_vine",
+        "twisting_vine"
+      ],
+      "pools": [
+        "weeping_vine",
+        "weeping_vine"
+      ],
+      "pinned_states": [],
+      "climbable": true,
+      "appearances_before": 2,
+      "appearances_after": 2,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": "可爬：借可爬藤蔓组（原版 climbable），碰撞箱随载体"
+    },
+    {
+      "id": "betternether:bone_grass",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:bone_stalactite",
+      "collision": "partial",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 8,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 8,
+        "to": 1,
+        "dropped": [
+          "size_1",
+          "size_2",
+          "size_3",
+          "size_4",
+          "size_5",
+          "size_6",
+          "size_7"
+        ],
+        "redirect": {
+          "size_1": "size_0",
+          "size_2": "size_0",
+          "size_3": "size_0",
+          "size_4": "size_0",
+          "size_5": "size_0",
+          "size_6": "size_0",
+          "size_7": "size_0"
+        }
+      },
+      "match": "approximate",
+      "fidelity": "上游 形状表里没有这个方块的 partial 记录：CE 没有对应的部分碰撞载体，按无碰撞落地"
+    },
+    {
+      "id": "betternether:brown_large_mushroom",
+      "collision": "partial",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 11,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 11,
+        "to": 1,
+        "dropped": [
+          "shape_side_n",
+          "shape_side_s",
+          "shape_side_e",
+          "shape_side_w",
+          "shape_corner_n",
+          "shape_corner_s",
+          "shape_corner_e",
+          "shape_corner_w",
+          "shape_middle",
+          "shape_bottom"
+        ],
+        "redirect": {
+          "shape_side_n": "shape_top",
+          "shape_side_s": "shape_top",
+          "shape_side_e": "shape_top",
+          "shape_side_w": "shape_top",
+          "shape_corner_n": "shape_top",
+          "shape_corner_s": "shape_top",
+          "shape_corner_e": "shape_top",
+          "shape_corner_w": "shape_top",
+          "shape_middle": "shape_top",
+          "shape_bottom": "shape_top"
+        }
+      },
+      "match": "approximate",
+      "fidelity": "上游 0.5..1 高的整面宽菌盖：CE 没有对应的部分碰撞载体，按无碰撞落地"
+    },
+    {
+      "id": "betternether:egg_plant",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 2,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 2,
+        "to": 1,
+        "dropped": [
+          "destructed_true"
+        ],
+        "redirect": {
+          "destructed_true": "destructed_false"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:eye_vine",
+      "collision": "empty",
+      "family": [
+        "cave_vine",
+        "weeping_vine",
+        "twisting_vine"
+      ],
+      "pools": [
+        "weeping_vine"
+      ],
+      "pinned_states": [],
+      "climbable": true,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": "可爬：借可爬藤蔓组（原版 climbable），碰撞箱随载体"
+    },
+    {
+      "id": "betternether:eyeball",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:eyeball_small",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:feather_fern",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 4,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:giant_mold",
+      "collision": "partial",
+      "family": [
+        "chorus",
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 3,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 3,
+        "to": 1,
+        "dropped": [
+          "shape_middle",
+          "shape_bottom"
+        ],
+        "redirect": {
+          "shape_middle": "shape_top",
+          "shape_bottom": "shape_top"
+        }
+      },
+      "match": "approximate",
+      "fidelity": "上游 0.125..0.875 全高 / 0.3125..0.6875 全高；chorus 10/16 与 12/16 差 2/16"
+    },
+    {
+      "id": "betternether:gloomgrass",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:gloomsculk_crystal",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 6,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 6,
+        "to": 1,
+        "dropped": [
+          "facing_down",
+          "facing_north",
+          "facing_south",
+          "facing_west",
+          "facing_east"
+        ],
+        "redirect": {
+          "facing_down": "facing_up",
+          "facing_north": "facing_up",
+          "facing_south": "facing_up",
+          "facing_west": "facing_up",
+          "facing_east": "facing_up"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:gloomwisp_vine",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 12,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 12,
+        "to": 1,
+        "dropped": [
+          "shape_middle_spent_false_vine_dir_east",
+          "shape_top_spent_false_vine_dir_east",
+          "shape_top_spent_true_vine_dir_east",
+          "shape_top_spent_false_vine_dir_north",
+          "shape_top_spent_true_vine_dir_north",
+          "shape_top_spent_false_vine_dir_random",
+          "shape_top_spent_true_vine_dir_random",
+          "shape_top_spent_false_vine_dir_south",
+          "shape_top_spent_true_vine_dir_south",
+          "shape_top_spent_false_vine_dir_west",
+          "shape_top_spent_true_vine_dir_west"
+        ],
+        "redirect": {
+          "shape_middle_spent_false_vine_dir_east": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_false_vine_dir_east": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_true_vine_dir_east": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_false_vine_dir_north": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_true_vine_dir_north": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_false_vine_dir_random": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_true_vine_dir_random": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_false_vine_dir_south": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_true_vine_dir_south": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_false_vine_dir_west": "shape_bottom_spent_false_vine_dir_east",
+          "shape_top_spent_true_vine_dir_west": "shape_bottom_spent_false_vine_dir_east"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:glowstone_stalactite",
+      "collision": "partial",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 8,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 8,
+        "to": 1,
+        "dropped": [
+          "size_1",
+          "size_2",
+          "size_3",
+          "size_4",
+          "size_5",
+          "size_6",
+          "size_7"
+        ],
+        "redirect": {
+          "size_1": "size_0",
+          "size_2": "size_0",
+          "size_3": "size_0",
+          "size_4": "size_0",
+          "size_5": "size_0",
+          "size_6": "size_0",
+          "size_7": "size_0"
+        }
+      },
+      "match": "approximate",
+      "fidelity": "上游 形状表里没有这个方块的 partial 记录：CE 没有对应的部分碰撞载体，按无碰撞落地"
+    },
+    {
+      "id": "betternether:golden_vine",
+      "collision": "empty",
+      "family": [
+        "cave_vine",
+        "weeping_vine",
+        "twisting_vine"
+      ],
+      "pools": [
+        "weeping_vine",
+        "weeping_vine"
+      ],
+      "pinned_states": [],
+      "climbable": true,
+      "appearances_before": 2,
+      "appearances_after": 2,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": "可爬：借可爬藤蔓组（原版 climbable），碰撞箱随载体"
+    },
+    {
+      "id": "betternether:gray_mold",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:hook_mushroom",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:ink_bush",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 4,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:ink_bush_seed",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:jellyfish_mushroom",
+      "collision": "partial",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 9,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 9,
+        "to": 1,
+        "dropped": [
+          "shape_top_visual_sepia",
+          "shape_top_visual_poor",
+          "shape_middle_visual_normal",
+          "shape_middle_visual_sepia",
+          "shape_middle_visual_poor",
+          "shape_bottom_visual_normal",
+          "shape_bottom_visual_sepia",
+          "shape_bottom_visual_poor"
+        ],
+        "redirect": {
+          "shape_top_visual_sepia": "shape_top_visual_normal",
+          "shape_top_visual_poor": "shape_top_visual_normal",
+          "shape_middle_visual_normal": "shape_top_visual_normal",
+          "shape_middle_visual_sepia": "shape_top_visual_normal",
+          "shape_middle_visual_poor": "shape_top_visual_normal",
+          "shape_bottom_visual_normal": "shape_top_visual_normal",
+          "shape_bottom_visual_sepia": "shape_top_visual_normal",
+          "shape_bottom_visual_poor": "shape_top_visual_normal"
+        }
+      },
+      "match": "approximate",
+      "fidelity": "上游 0.0625..0.9375 × 0..1（14/16 全高柱）：CE 没有对应的部分碰撞载体，按无碰撞落地"
+    },
+    {
+      "id": "betternether:jungle_moss",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 4,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "facing_south",
+          "facing_east",
+          "facing_west"
+        ],
+        "redirect": {
+          "facing_south": "facing_north",
+          "facing_east": "facing_north",
+          "facing_west": "facing_north"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:jungle_plant",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:lumabus_vine",
+      "collision": "empty",
+      "family": [
+        "cave_vine",
+        "weeping_vine",
+        "twisting_vine"
+      ],
+      "pools": [
+        "weeping_vine",
+        "weeping_vine",
+        "weeping_vine"
+      ],
+      "pinned_states": [],
+      "climbable": true,
+      "appearances_before": 3,
+      "appearances_after": 3,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": "可爬：借可爬藤蔓组（原版 climbable），碰撞箱随载体"
+    },
+    {
+      "id": "betternether:magma_flower",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 4,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:moss_cover",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:mushroom_fir_trunk",
+      "collision": "partial",
+      "family": [
+        "chorus",
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 12,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 12,
+        "to": 1,
+        "dropped": [
+          "shape_middle",
+          "shape_top",
+          "shape_side_big_n",
+          "shape_side_big_s",
+          "shape_side_big_e",
+          "shape_side_big_w",
+          "shape_side_small_n",
+          "shape_side_small_s",
+          "shape_side_small_e",
+          "shape_side_small_w",
+          "shape_end"
+        ],
+        "redirect": {
+          "shape_middle": "shape_bottom",
+          "shape_top": "shape_bottom",
+          "shape_side_big_n": "shape_bottom",
+          "shape_side_big_s": "shape_bottom",
+          "shape_side_big_e": "shape_bottom",
+          "shape_side_big_w": "shape_bottom",
+          "shape_side_small_n": "shape_bottom",
+          "shape_side_small_s": "shape_bottom",
+          "shape_side_small_e": "shape_bottom",
+          "shape_side_small_w": "shape_bottom",
+          "shape_end": "shape_bottom"
+        }
+      },
+      "match": "approximate",
+      "fidelity": "上游 0.25..0.75 柱 + 半格枝头 / 满格菌盖；只近似柱身；枝头与菌盖无对应载体"
+    },
+    {
+      "id": "betternether:nether_cactus",
+      "collision": "partial",
+      "family": [
+        "chorus",
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 2,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 2,
+        "to": 1,
+        "dropped": [
+          "top_true"
+        ],
+        "redirect": {
+          "top_true": "top_false"
+        }
+      },
+      "match": "approximate",
+      "fidelity": "上游 0.0625..0.9375 × 0..1 / 0.25..0.75 × 0..0.5；chorus 10/16 比上游 15/16 细 5/16"
+    },
+    {
+      "id": "betternether:nether_grass",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:nether_mushroom_stem",
+      "collision": "partial",
+      "family": [
+        "chorus",
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling"
+      ],
+      "pools": [
+        "tripwire",
+        "pressure_plate",
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 3,
+      "appearances_after": 3,
+      "appearances_merged": null,
+      "match": "approximate",
+      "fidelity": "上游 axis 三态 6/16 细柱；chorus 无 axis：横放时碰撞箱仍竖直，且比上游粗 4/16"
+    },
+    {
+      "id": "betternether:nether_reed_stem",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 2,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 2,
+        "to": 1,
+        "dropped": [
+          "top_true"
+        ],
+        "redirect": {
+          "top_true": "top_false"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:netherrack_stalactite",
+      "collision": "partial",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 8,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 8,
+        "to": 1,
+        "dropped": [
+          "size_1",
+          "size_2",
+          "size_3",
+          "size_4",
+          "size_5",
+          "size_6",
+          "size_7"
+        ],
+        "redirect": {
+          "size_1": "size_0",
+          "size_2": "size_0",
+          "size_3": "size_0",
+          "size_4": "size_0",
+          "size_5": "size_0",
+          "size_6": "size_0",
+          "size_7": "size_0"
+        }
+      },
+      "match": "approximate",
+      "fidelity": "上游 形状表里没有这个方块的 partial 记录：CE 没有对应的部分碰撞载体，按无碰撞落地"
+    },
+    {
+      "id": "betternether:orange_mushroom",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 4,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "age_1",
+          "age_2",
+          "age_3"
+        ],
+        "redirect": {
+          "age_1": "age_0",
+          "age_2": "age_0",
+          "age_3": "age_0"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:pale_gloomgrass",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:red_large_mushroom",
+      "collision": "partial",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 3,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 3,
+        "to": 1,
+        "dropped": [
+          "shape_middle",
+          "shape_bottom"
+        ],
+        "redirect": {
+          "shape_middle": "shape_top",
+          "shape_bottom": "shape_top"
+        }
+      },
+      "match": "approximate",
+      "fidelity": "上游 0.5..1 高的整面宽菌盖：CE 没有对应的部分碰撞载体，按无碰撞落地"
+    },
+    {
+      "id": "betternether:red_mold",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:rubeus_cone",
+      "collision": "partial",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "approximate",
+      "fidelity": "上游 0.1875..0.8125 × 0.1875..1 锥体：CE 没有对应的部分碰撞载体，按无碰撞落地"
+    },
+    {
+      "id": "betternether:sepia_bone_grass",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:soul_grass",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:soul_lily_sapling",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:soul_vein",
+      "collision": "empty",
+      "family": [
+        "cave_vine",
+        "weeping_vine",
+        "twisting_vine"
+      ],
+      "pools": [
+        "weeping_vine"
+      ],
+      "pinned_states": [],
+      "climbable": true,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": "可爬：借可爬藤蔓组（原版 climbable），碰撞箱随载体"
+    },
+    {
+      "id": "betternether:stalagnate_bowl",
+      "collision": "partial",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "approximate",
+      "fidelity": "上游 0.3125..0.6875 × 0..0.1875 小碗：CE 没有对应的部分碰撞载体，按无碰撞落地"
+    },
+    {
+      "id": "betternether:stalagnate_stem",
+      "collision": "partial",
+      "family": [
+        "chorus",
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling"
+      ],
+      "pools": [
+        "tripwire",
+        "pressure_plate",
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 3,
+      "appearances_after": 3,
+      "appearances_merged": null,
+      "match": "approximate",
+      "fidelity": "上游 axis 三态 6/16 细柱；chorus 无 axis：横放时碰撞箱仍竖直，且比上游粗 4/16"
+    },
+    {
+      "id": "betternether:swamp_grass",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 1,
+      "appearances_after": 1,
+      "appearances_merged": null,
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:wall_moss",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 4,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "facing_south",
+          "facing_east",
+          "facing_west"
+        ],
+        "redirect": {
+          "facing_south": "facing_north",
+          "facing_east": "facing_north",
+          "facing_west": "facing_north"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:wall_mushroom_brown",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "pressure_plate"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 4,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "facing_south",
+          "facing_east",
+          "facing_west"
+        ],
+        "redirect": {
+          "facing_south": "facing_north",
+          "facing_east": "facing_north",
+          "facing_west": "facing_north"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    },
+    {
+      "id": "betternether:wall_mushroom_red",
+      "collision": "empty",
+      "family": [
+        "tripwire",
+        "pressure_plate",
+        "kelp",
+        "sugar_cane",
+        "sapling",
+        "chorus"
+      ],
+      "pools": [
+        "tripwire"
+      ],
+      "pinned_states": [],
+      "climbable": false,
+      "appearances_before": 4,
+      "appearances_after": 1,
+      "appearances_merged": {
+        "from": 4,
+        "to": 1,
+        "dropped": [
+          "facing_south",
+          "facing_east",
+          "facing_west"
+        ],
+        "redirect": {
+          "facing_south": "facing_north",
+          "facing_east": "facing_north",
+          "facing_west": "facing_north"
+        }
+      },
+      "match": "exact",
+      "fidelity": ""
+    }
+  ],
+  "pool_usage": {
+    "pressure_plate": 17,
+    "tripwire": 34,
+    "weeping_vine": 9
+  },
+  "pinned_usage": {},
+  "pinned_states": [],
+  "pinned_capacity": {
+    "lightning_rod": 16,
+    "copper_chain": 8,
+    "note_block": 78,
+    "trapdoor": 1
+  },
+  "appearance_merges": [
+    {
+      "id": "betternether:agave",
+      "from": 4,
+      "to": 1,
+      "dropped": [
+        "age_1",
+        "age_2",
+        "age_3"
+      ],
+      "redirect": {
+        "age_1": "age_0",
+        "age_2": "age_0",
+        "age_3": "age_0"
+      }
+    },
+    {
+      "id": "betternether:barrel_cactus",
+      "from": 4,
+      "to": 1,
+      "dropped": [
+        "age_1",
+        "age_2",
+        "age_3"
+      ],
+      "redirect": {
+        "age_1": "age_0",
+        "age_2": "age_0",
+        "age_3": "age_0"
+      }
+    },
+    {
+      "id": "betternether:basalt_stalactite",
+      "from": 8,
+      "to": 1,
+      "dropped": [
+        "size_1",
+        "size_2",
+        "size_3",
+        "size_4",
+        "size_5",
+        "size_6",
+        "size_7"
+      ],
+      "redirect": {
+        "size_1": "size_0",
+        "size_2": "size_0",
+        "size_3": "size_0",
+        "size_4": "size_0",
+        "size_5": "size_0",
+        "size_6": "size_0",
+        "size_7": "size_0"
+      }
+    },
+    {
+      "id": "betternether:black_apple",
+      "from": 4,
+      "to": 1,
+      "dropped": [
+        "age_1",
+        "age_2",
+        "age_3"
+      ],
+      "redirect": {
+        "age_1": "age_0",
+        "age_2": "age_0",
+        "age_3": "age_0"
+      }
+    },
+    {
+      "id": "betternether:blackstone_stalactite",
+      "from": 8,
+      "to": 1,
+      "dropped": [
+        "size_1",
+        "size_2",
+        "size_3",
+        "size_4",
+        "size_5",
+        "size_6",
+        "size_7"
+      ],
+      "redirect": {
+        "size_1": "size_0",
+        "size_2": "size_0",
+        "size_3": "size_0",
+        "size_4": "size_0",
+        "size_5": "size_0",
+        "size_6": "size_0",
+        "size_7": "size_0"
+      }
+    },
+    {
+      "id": "betternether:bone_stalactite",
+      "from": 8,
+      "to": 1,
+      "dropped": [
+        "size_1",
+        "size_2",
+        "size_3",
+        "size_4",
+        "size_5",
+        "size_6",
+        "size_7"
+      ],
+      "redirect": {
+        "size_1": "size_0",
+        "size_2": "size_0",
+        "size_3": "size_0",
+        "size_4": "size_0",
+        "size_5": "size_0",
+        "size_6": "size_0",
+        "size_7": "size_0"
+      }
+    },
+    {
+      "id": "betternether:brown_large_mushroom",
+      "from": 11,
+      "to": 1,
+      "dropped": [
+        "shape_side_n",
+        "shape_side_s",
+        "shape_side_e",
+        "shape_side_w",
+        "shape_corner_n",
+        "shape_corner_s",
+        "shape_corner_e",
+        "shape_corner_w",
+        "shape_middle",
+        "shape_bottom"
+      ],
+      "redirect": {
+        "shape_side_n": "shape_top",
+        "shape_side_s": "shape_top",
+        "shape_side_e": "shape_top",
+        "shape_side_w": "shape_top",
+        "shape_corner_n": "shape_top",
+        "shape_corner_s": "shape_top",
+        "shape_corner_e": "shape_top",
+        "shape_corner_w": "shape_top",
+        "shape_middle": "shape_top",
+        "shape_bottom": "shape_top"
+      }
+    },
+    {
+      "id": "betternether:egg_plant",
+      "from": 2,
+      "to": 1,
+      "dropped": [
+        "destructed_true"
+      ],
+      "redirect": {
+        "destructed_true": "destructed_false"
+      }
+    },
+    {
+      "id": "betternether:feather_fern",
+      "from": 4,
+      "to": 1,
+      "dropped": [
+        "age_1",
+        "age_2",
+        "age_3"
+      ],
+      "redirect": {
+        "age_1": "age_0",
+        "age_2": "age_0",
+        "age_3": "age_0"
+      }
+    },
+    {
+      "id": "betternether:giant_mold",
+      "from": 3,
+      "to": 1,
+      "dropped": [
+        "shape_middle",
+        "shape_bottom"
+      ],
+      "redirect": {
+        "shape_middle": "shape_top",
+        "shape_bottom": "shape_top"
+      }
+    },
+    {
+      "id": "betternether:gloomsculk_crystal",
+      "from": 6,
+      "to": 1,
+      "dropped": [
+        "facing_down",
+        "facing_north",
+        "facing_south",
+        "facing_west",
+        "facing_east"
+      ],
+      "redirect": {
+        "facing_down": "facing_up",
+        "facing_north": "facing_up",
+        "facing_south": "facing_up",
+        "facing_west": "facing_up",
+        "facing_east": "facing_up"
+      }
+    },
+    {
+      "id": "betternether:gloomwisp_vine",
+      "from": 12,
+      "to": 1,
+      "dropped": [
+        "shape_middle_spent_false_vine_dir_east",
+        "shape_top_spent_false_vine_dir_east",
+        "shape_top_spent_true_vine_dir_east",
+        "shape_top_spent_false_vine_dir_north",
+        "shape_top_spent_true_vine_dir_north",
+        "shape_top_spent_false_vine_dir_random",
+        "shape_top_spent_true_vine_dir_random",
+        "shape_top_spent_false_vine_dir_south",
+        "shape_top_spent_true_vine_dir_south",
+        "shape_top_spent_false_vine_dir_west",
+        "shape_top_spent_true_vine_dir_west"
+      ],
+      "redirect": {
+        "shape_middle_spent_false_vine_dir_east": "shape_bottom_spent_false_vine_dir_east",
+        "shape_top_spent_false_vine_dir_east": "shape_bottom_spent_false_vine_dir_east",
+        "shape_top_spent_true_vine_dir_east": "shape_bottom_spent_false_vine_dir_east",
+        "shape_top_spent_false_vine_dir_north": "shape_bottom_spent_false_vine_dir_east",
+        "shape_top_spent_true_vine_dir_north": "shape_bottom_spent_false_vine_dir_east",
+        "shape_top_spent_false_vine_dir_random": "shape_bottom_spent_false_vine_dir_east",
+        "shape_top_spent_true_vine_dir_random": "shape_bottom_spent_false_vine_dir_east",
+        "shape_top_spent_false_vine_dir_south": "shape_bottom_spent_false_vine_dir_east",
+        "shape_top_spent_true_vine_dir_south": "shape_bottom_spent_false_vine_dir_east",
+        "shape_top_spent_false_vine_dir_west": "shape_bottom_spent_false_vine_dir_east",
+        "shape_top_spent_true_vine_dir_west": "shape_bottom_spent_false_vine_dir_east"
+      }
+    },
+    {
+      "id": "betternether:glowstone_stalactite",
+      "from": 8,
+      "to": 1,
+      "dropped": [
+        "size_1",
+        "size_2",
+        "size_3",
+        "size_4",
+        "size_5",
+        "size_6",
+        "size_7"
+      ],
+      "redirect": {
+        "size_1": "size_0",
+        "size_2": "size_0",
+        "size_3": "size_0",
+        "size_4": "size_0",
+        "size_5": "size_0",
+        "size_6": "size_0",
+        "size_7": "size_0"
+      }
+    },
+    {
+      "id": "betternether:ink_bush",
+      "from": 4,
+      "to": 1,
+      "dropped": [
+        "age_1",
+        "age_2",
+        "age_3"
+      ],
+      "redirect": {
+        "age_1": "age_0",
+        "age_2": "age_0",
+        "age_3": "age_0"
+      }
+    },
+    {
+      "id": "betternether:jellyfish_mushroom",
+      "from": 9,
+      "to": 1,
+      "dropped": [
+        "shape_top_visual_sepia",
+        "shape_top_visual_poor",
+        "shape_middle_visual_normal",
+        "shape_middle_visual_sepia",
+        "shape_middle_visual_poor",
+        "shape_bottom_visual_normal",
+        "shape_bottom_visual_sepia",
+        "shape_bottom_visual_poor"
+      ],
+      "redirect": {
+        "shape_top_visual_sepia": "shape_top_visual_normal",
+        "shape_top_visual_poor": "shape_top_visual_normal",
+        "shape_middle_visual_normal": "shape_top_visual_normal",
+        "shape_middle_visual_sepia": "shape_top_visual_normal",
+        "shape_middle_visual_poor": "shape_top_visual_normal",
+        "shape_bottom_visual_normal": "shape_top_visual_normal",
+        "shape_bottom_visual_sepia": "shape_top_visual_normal",
+        "shape_bottom_visual_poor": "shape_top_visual_normal"
+      }
+    },
+    {
+      "id": "betternether:jungle_moss",
+      "from": 4,
+      "to": 1,
+      "dropped": [
+        "facing_south",
+        "facing_east",
+        "facing_west"
+      ],
+      "redirect": {
+        "facing_south": "facing_north",
+        "facing_east": "facing_north",
+        "facing_west": "facing_north"
+      }
+    },
+    {
+      "id": "betternether:magma_flower",
+      "from": 4,
+      "to": 1,
+      "dropped": [
+        "age_1",
+        "age_2",
+        "age_3"
+      ],
+      "redirect": {
+        "age_1": "age_0",
+        "age_2": "age_0",
+        "age_3": "age_0"
+      }
+    },
+    {
+      "id": "betternether:mushroom_fir_trunk",
+      "from": 12,
+      "to": 1,
+      "dropped": [
+        "shape_middle",
+        "shape_top",
+        "shape_side_big_n",
+        "shape_side_big_s",
+        "shape_side_big_e",
+        "shape_side_big_w",
+        "shape_side_small_n",
+        "shape_side_small_s",
+        "shape_side_small_e",
+        "shape_side_small_w",
+        "shape_end"
+      ],
+      "redirect": {
+        "shape_middle": "shape_bottom",
+        "shape_top": "shape_bottom",
+        "shape_side_big_n": "shape_bottom",
+        "shape_side_big_s": "shape_bottom",
+        "shape_side_big_e": "shape_bottom",
+        "shape_side_big_w": "shape_bottom",
+        "shape_side_small_n": "shape_bottom",
+        "shape_side_small_s": "shape_bottom",
+        "shape_side_small_e": "shape_bottom",
+        "shape_side_small_w": "shape_bottom",
+        "shape_end": "shape_bottom"
+      }
+    },
+    {
+      "id": "betternether:nether_cactus",
+      "from": 2,
+      "to": 1,
+      "dropped": [
+        "top_true"
+      ],
+      "redirect": {
+        "top_true": "top_false"
+      }
+    },
+    {
+      "id": "betternether:nether_reed_stem",
+      "from": 2,
+      "to": 1,
+      "dropped": [
+        "top_true"
+      ],
+      "redirect": {
+        "top_true": "top_false"
+      }
+    },
+    {
+      "id": "betternether:netherrack_stalactite",
+      "from": 8,
+      "to": 1,
+      "dropped": [
+        "size_1",
+        "size_2",
+        "size_3",
+        "size_4",
+        "size_5",
+        "size_6",
+        "size_7"
+      ],
+      "redirect": {
+        "size_1": "size_0",
+        "size_2": "size_0",
+        "size_3": "size_0",
+        "size_4": "size_0",
+        "size_5": "size_0",
+        "size_6": "size_0",
+        "size_7": "size_0"
+      }
+    },
+    {
+      "id": "betternether:orange_mushroom",
+      "from": 4,
+      "to": 1,
+      "dropped": [
+        "age_1",
+        "age_2",
+        "age_3"
+      ],
+      "redirect": {
+        "age_1": "age_0",
+        "age_2": "age_0",
+        "age_3": "age_0"
+      }
+    },
+    {
+      "id": "betternether:red_large_mushroom",
+      "from": 3,
+      "to": 1,
+      "dropped": [
+        "shape_middle",
+        "shape_bottom"
+      ],
+      "redirect": {
+        "shape_middle": "shape_top",
+        "shape_bottom": "shape_top"
+      }
+    },
+    {
+      "id": "betternether:wall_moss",
+      "from": 4,
+      "to": 1,
+      "dropped": [
+        "facing_south",
+        "facing_east",
+        "facing_west"
+      ],
+      "redirect": {
+        "facing_south": "facing_north",
+        "facing_east": "facing_north",
+        "facing_west": "facing_north"
+      }
+    },
+    {
+      "id": "betternether:wall_mushroom_brown",
+      "from": 4,
+      "to": 1,
+      "dropped": [
+        "facing_south",
+        "facing_east",
+        "facing_west"
+      ],
+      "redirect": {
+        "facing_south": "facing_north",
+        "facing_east": "facing_north",
+        "facing_west": "facing_north"
+      }
+    },
+    {
+      "id": "betternether:wall_mushroom_red",
+      "from": 4,
+      "to": 1,
+      "dropped": [
+        "facing_south",
+        "facing_east",
+        "facing_west"
+      ],
+      "redirect": {
+        "facing_south": "facing_north",
+        "facing_east": "facing_north",
+        "facing_west": "facing_north"
+      }
+    }
+  ],
+  "appearance_totals": {
+    "before": 180,
+    "after": 60
+  },
+  "pool_capacity": {
+    "tripwire": 43,
+    "weeping_vine": 15,
+    "pressure_plate": 27
+  },
+  "collision_counts": {
+    "empty": 36,
+    "partial": 16,
+    "exact": 36
+  }
+}

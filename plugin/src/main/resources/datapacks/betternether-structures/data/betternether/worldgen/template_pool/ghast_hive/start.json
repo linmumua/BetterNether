@@ -1,0 +1,15 @@
+{
+  "name": "betternether:ghast_hive/start",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:ghast_hive/ghast_hive",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

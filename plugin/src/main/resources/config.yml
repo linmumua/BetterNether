@@ -1,0 +1,79 @@
+# BetterNether 配置文件（Paper/Folia 26.3）
+#
+# config-version 是世代号：插件升级时会用它做键级 diff——补回新版本引入的缺失键，
+# 并把旧键改名迁移，但**绝不覆盖你已设置的值**。请不要手动改这个数字。
+config-version: 1
+
+generator:
+  # 矿物、树木/特征随机流与地表规则噪声用的种子。0 = 跟随世界自己的种子（推荐）。
+  # 设为非 0 时，所有使用本生成器的世界会共享同一套矿物与植被分布。
+  # 注意：**群系分布不受这里影响**。群系表是原版气候，取世界自己的种子经
+  # RandomState 算出来的温度/湿度，插件改不了；要让群系变只能是换世界种子。
+  seed: 0
+
+ore:
+  # 矿物总开关：0 = 关闭，任何非 0 值 = 按上游 8 条 placed feature 原样生成。
+  #
+  # 它**不再是**"每区块几条"：上游给每种矿各自独立的 placed_feature，每个都带自己的
+  # count / rarity_filter / height_range / feature.size 和**自己的群系清单**，没有任何"总量"概念。
+  # 把这里当成总量再乘一遍或按比例缩放，都会改变密度——那不是缩放，是另一个世界。
+  # 缺省 29 只是历史值，不代表配额。
+  #
+  # 上游每条矿（placed_feature + feature 的字段对，8 条）：
+  #   cincinnasite_ore           count 10           size 8    uniform   above_bottom 10 .. below_top 10
+  #   nether_ruby_rare_ore       rarity chance 2    size 12   trapezoid above_bottom 70 .. below_top 0
+  #   nether_lapis_ore           count 14           size 4    trapezoid above_bottom 32 .. below_top 10
+  #   nether_redstone_ore        rarity chance 1    size 16   trapezoid above_bottom 8 .. above_bottom 40   discard 0.3
+  #   nether_ruby_ore            count 3            size 8    uniform   above_bottom 32 .. below_top 32
+  #   nether_ruby_large_ore      count 5            size 5    uniform   above_bottom 32 .. below_top 0    discard 0.1
+  #   nether_ruby_soul_ore       count 5            size 5    uniform   above_bottom 32 .. below_top 0    discard 0.1
+  #   gloomwood_ceiling_debris   count 1            size 2    uniform   above_bottom 4  .. below_top 4
+  #     ↑ 它也是 minecraft:ore（targets: sculk / netherrack → ancient debris），只是链更长：
+  #       height_range → count 1 → in_square → biome → wover:every_layer(min 4, top:false)
+  #       → biome → rarity_filter chance 5。它先抽高度再 count，与上面 7 条相反。
+  #       注意 size 2 的球半径上界只有 0.625，实测近乎不产出——这是上游同一份公式的结果。
+  #
+  # 群系归属也照上游：前四条在 21 个 BN 群系 + 所有原版下界群系；nether_ruby_ore 只在 10 个 BN
+  # 群系和原版 crimson/warped forest；nether_ruby_large_ore 只在 soul_sand_valley；
+  # nether_ruby_soul_ore 只在 soul_plain（且只替换 soul soil）；gloomwood_ceiling_debris 只在 gloomwood。
+  # nether_swampland 与 nether_swampland_terraces 一条自定义矿都没有。
+  veins-per-chunk: 29
+  # 单条矿团 feature.size 的**硬上限**，仅调试用。缺省 16 恰好等于上游最大值（nether_redstone_ore 的
+  # size 16），也就是不裁剪。调低它会让矿团比上游小，属于刻意偏离。
+  #
+  # 注意 size 是**球链的层数**，不是方块数上限：一条 size 16 的矿团会写 14~27 个方块。
+  vein-size: 16
+
+flora:
+  # 植被总开关：0 = 关闭，任何非 0 值 = 按上游 worldgen 数据放置。
+  #
+  # 它**不再**是"每区块尝试几次"：数量已经由上游数据决定（每条 placed feature 自己的
+  # tries / count / every_layer / rarity_filter，与模组逐字一致）。把它再当成次数乘一遍，
+  # 就等于把上游的密度重复计数，调大只会把地面铺满。所以这里只区分"开"与"关"。
+  per-chunk: 28
+
+vine:
+  # 悬挂藤蔓（eye_vine / golden_vine / lumabus_vine）向下延伸的最大格数。
+  #
+  # 默认 9：取自上游 BlockEyeVine 的 `super(settings, 9, 2)` 第一个参数。
+  # ⚠️ 说明：bclib 的 BaseVineBlock 源码不在本仓库（只有编译依赖），
+  # 该参数的确切语义未能从源码证实，9 是按上游构造参数推断的保守值。
+  #
+  # 上限 32 是 CE 侧的构建期硬上限（scripts/bnlib/support.py 的 HANGING_MAX_HEIGHT）；
+  # 填再大也不会突破 32。范围 1..32。
+  max-length: 9
+
+  # 每次随机扫描时，某一株藤蔓向下延伸一段的几率（百分比）。0 = 不自然生长。
+  # 默认 1（即 1%），比原版藤蔓保守，避免下界藤蔓瞬间铺满天花板。
+  # 范围 0..100。
+  growth-chance: 1
+
+  # 自然生长扫描的间隔（tick）。默认 100（5 秒）。
+  # 每轮在已加载区域里随机挑若干株藤蔓尝试延伸，见 growth-attempts。
+  # 范围 1..12000。
+  growth-interval-ticks: 100
+
+  # 每轮扫描最多尝试多少株藤蔓。默认 4。0 = 停止自然生长（只保留手动放置）。
+  # 该值直接决定周期任务的开销：每株一次 region 调度。
+  # 范围 0..64。
+  growth-attempts: 4

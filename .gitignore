@@ -1,0 +1,29 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# 交付产物
+jars/
+
+# 上游源码（体积大，按需重新下载）
+upstream/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# 本地日志
+logs/
+*.log
+
+# 一次性备份目录与调试输出（不随仓库分发）
+_*-backup-*/
+*.txt
+hs_err_pid*.log
+replay_pid*.log
+*.args
+.backup*/
+.narrafork/
+.trash/

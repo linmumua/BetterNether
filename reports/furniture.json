@@ -1,0 +1,546 @@
+{
+  "families": [
+    {
+      "family": "fire_bowl",
+      "blocks": 6,
+      "truth": "AABB[0,0,0]->[1,0.75,1]（整格见方 × 3/4 高）",
+      "hitboxes": 4,
+      "union": [
+        -0.5,
+        0.0,
+        -0.5,
+        0.5,
+        0.75,
+        0.5
+      ],
+      "note": "4 个 shulker 拼成 1×0.75×1，与上游逐位相等（每个 0.5 见方 × 0.75 高，peek=50 ⇒ physicalPeek=0.5）。代价是每个火盆落地要 4 个 hitbox 实体。**未实现**：上游的 `fire` 状态（点燃/熄灭 + 亮度）。家具变体要配 `glowing_furniture` 与 events 才能点亮，本次只发布未点燃外观 —— 改法见 furniture.py 的 TODO（variant=lit + flint_and_steel）。"
+    },
+    {
+      "family": "pedestal",
+      "blocks": 1,
+      "truth": "AABB[0.125,0,0.125]->[0.875,1,0.875]（12/16 见方 × 1 高）",
+      "hitboxes": 1,
+      "union": [
+        -0.375,
+        0.0,
+        -0.375,
+        0.375,
+        0.99797,
+        0.375
+      ],
+      "note": "水平精确，高度 0.9960（peek 只能取整，误差 −0.004 格）。**未实现**：上游是 `BlockCincinnasitePedestal`，能把物品摆在顶面上；家具形态没有这个交互 —— 这是家具化的固定代价，逐块记在报告里。"
+    },
+    {
+      "family": "pot",
+      "blocks": 2,
+      "truth": "AABB[0.1875,0,0.1875]->[0.8125,0.5,0.8125]（10/16 见方 × 1/2 高）",
+      "hitboxes": 1,
+      "union": [
+        -0.25,
+        0.0,
+        -0.25,
+        0.25,
+        0.5,
+        0.25
+      ],
+      "note": "高度精确（0.5），水平 0.5 比上游的 0.625 窄 2/16（每边 1/16）—— 罐子四周 1/16 的边沿可以走进去。这是「高度优先」的取舍：罐子是矮装饰，踩空 1/16 看不出来，而高度错了会挡住视线。"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "betternether:brick_pot",
+      "family": "pot",
+      "truth": "AABB[0.1875,0,0.1875]->[0.8125,0.5,0.8125]（10/16 见方 × 1/2 高）",
+      "hitboxes": [
+        {
+          "type": "shulker",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction": "up",
+          "peek": 0,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        }
+      ],
+      "rotation": "eight",
+      "model": "betternether:block/brick_pot",
+      "note": "高度精确（0.5），水平 0.5 比上游的 0.625 窄 2/16（每边 1/16）—— 罐子四周 1/16 的边沿可以走进去。这是「高度优先」的取舍：罐子是矮装饰，踩空 1/16 看不出来，而高度错了会挡住视线。"
+    },
+    {
+      "id": "betternether:bricks_fire_bowl",
+      "family": "fire_bowl",
+      "truth": "AABB[0,0,0]->[1,0.75,1]（整格见方 × 3/4 高）",
+      "hitboxes": [
+        {
+          "type": "shulker",
+          "position": [
+            -0.25,
+            0.0,
+            -0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            0.25,
+            0.0,
+            -0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            -0.25,
+            0.0,
+            0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            0.25,
+            0.0,
+            0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        }
+      ],
+      "rotation": "eight",
+      "model": "betternether:block/bricks_fire_bowl_off",
+      "note": "4 个 shulker 拼成 1×0.75×1，与上游逐位相等（每个 0.5 见方 × 0.75 高，peek=50 ⇒ physicalPeek=0.5）。代价是每个火盆落地要 4 个 hitbox 实体。**未实现**：上游的 `fire` 状态（点燃/熄灭 + 亮度）。家具变体要配 `glowing_furniture` 与 events 才能点亮，本次只发布未点燃外观 —— 改法见 furniture.py 的 TODO（variant=lit + flint_and_steel）。"
+    },
+    {
+      "id": "betternether:bricks_fire_bowl_soul",
+      "family": "fire_bowl",
+      "truth": "AABB[0,0,0]->[1,0.75,1]（整格见方 × 3/4 高）",
+      "hitboxes": [
+        {
+          "type": "shulker",
+          "position": [
+            -0.25,
+            0.0,
+            -0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            0.25,
+            0.0,
+            -0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            -0.25,
+            0.0,
+            0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            0.25,
+            0.0,
+            0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        }
+      ],
+      "rotation": "eight",
+      "model": "betternether:block/bricks_fire_bowl_soul_off",
+      "note": "4 个 shulker 拼成 1×0.75×1，与上游逐位相等（每个 0.5 见方 × 0.75 高，peek=50 ⇒ physicalPeek=0.5）。代价是每个火盆落地要 4 个 hitbox 实体。**未实现**：上游的 `fire` 状态（点燃/熄灭 + 亮度）。家具变体要配 `glowing_furniture` 与 events 才能点亮，本次只发布未点燃外观 —— 改法见 furniture.py 的 TODO（variant=lit + flint_and_steel）。"
+    },
+    {
+      "id": "betternether:cincinnasite_fire_bowl",
+      "family": "fire_bowl",
+      "truth": "AABB[0,0,0]->[1,0.75,1]（整格见方 × 3/4 高）",
+      "hitboxes": [
+        {
+          "type": "shulker",
+          "position": [
+            -0.25,
+            0.0,
+            -0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            0.25,
+            0.0,
+            -0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            -0.25,
+            0.0,
+            0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            0.25,
+            0.0,
+            0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        }
+      ],
+      "rotation": "eight",
+      "model": "betternether:block/cincinnasite_fire_bowl_off",
+      "note": "4 个 shulker 拼成 1×0.75×1，与上游逐位相等（每个 0.5 见方 × 0.75 高，peek=50 ⇒ physicalPeek=0.5）。代价是每个火盆落地要 4 个 hitbox 实体。**未实现**：上游的 `fire` 状态（点燃/熄灭 + 亮度）。家具变体要配 `glowing_furniture` 与 events 才能点亮，本次只发布未点燃外观 —— 改法见 furniture.py 的 TODO（variant=lit + flint_and_steel）。"
+    },
+    {
+      "id": "betternether:cincinnasite_fire_bowl_soul",
+      "family": "fire_bowl",
+      "truth": "AABB[0,0,0]->[1,0.75,1]（整格见方 × 3/4 高）",
+      "hitboxes": [
+        {
+          "type": "shulker",
+          "position": [
+            -0.25,
+            0.0,
+            -0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            0.25,
+            0.0,
+            -0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            -0.25,
+            0.0,
+            0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            0.25,
+            0.0,
+            0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        }
+      ],
+      "rotation": "eight",
+      "model": "betternether:block/cincinnasite_fire_bowl_soul_off",
+      "note": "4 个 shulker 拼成 1×0.75×1，与上游逐位相等（每个 0.5 见方 × 0.75 高，peek=50 ⇒ physicalPeek=0.5）。代价是每个火盆落地要 4 个 hitbox 实体。**未实现**：上游的 `fire` 状态（点燃/熄灭 + 亮度）。家具变体要配 `glowing_furniture` 与 events 才能点亮，本次只发布未点燃外观 —— 改法见 furniture.py 的 TODO（variant=lit + flint_and_steel）。"
+    },
+    {
+      "id": "betternether:cincinnasite_pedestal",
+      "family": "pedestal",
+      "truth": "AABB[0.125,0,0.125]->[0.875,1,0.875]（12/16 见方 × 1 高）",
+      "hitboxes": [
+        {
+          "type": "shulker",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction": "up",
+          "peek": 39,
+          "scale": 0.75,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        }
+      ],
+      "rotation": "eight",
+      "model": "betternether:block/cincinnasite_pedestal",
+      "note": "水平精确，高度 0.9960（peek 只能取整，误差 −0.004 格）。**未实现**：上游是 `BlockCincinnasitePedestal`，能把物品摆在顶面上；家具形态没有这个交互 —— 这是家具化的固定代价，逐块记在报告里。"
+    },
+    {
+      "id": "betternether:cincinnasite_pot",
+      "family": "pot",
+      "truth": "AABB[0.1875,0,0.1875]->[0.8125,0.5,0.8125]（10/16 见方 × 1/2 高）",
+      "hitboxes": [
+        {
+          "type": "shulker",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "direction": "up",
+          "peek": 0,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        }
+      ],
+      "rotation": "eight",
+      "model": "betternether:block/cincinnasite_pot",
+      "note": "高度精确（0.5），水平 0.5 比上游的 0.625 窄 2/16（每边 1/16）—— 罐子四周 1/16 的边沿可以走进去。这是「高度优先」的取舍：罐子是矮装饰，踩空 1/16 看不出来，而高度错了会挡住视线。"
+    },
+    {
+      "id": "betternether:netherite_fire_bowl",
+      "family": "fire_bowl",
+      "truth": "AABB[0,0,0]->[1,0.75,1]（整格见方 × 3/4 高）",
+      "hitboxes": [
+        {
+          "type": "shulker",
+          "position": [
+            -0.25,
+            0.0,
+            -0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            0.25,
+            0.0,
+            -0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            -0.25,
+            0.0,
+            0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            0.25,
+            0.0,
+            0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        }
+      ],
+      "rotation": "eight",
+      "model": "betternether:block/netherite_fire_bowl_off",
+      "note": "4 个 shulker 拼成 1×0.75×1，与上游逐位相等（每个 0.5 见方 × 0.75 高，peek=50 ⇒ physicalPeek=0.5）。代价是每个火盆落地要 4 个 hitbox 实体。**未实现**：上游的 `fire` 状态（点燃/熄灭 + 亮度）。家具变体要配 `glowing_furniture` 与 events 才能点亮，本次只发布未点燃外观 —— 改法见 furniture.py 的 TODO（variant=lit + flint_and_steel）。"
+    },
+    {
+      "id": "betternether:netherite_fire_bowl_soul",
+      "family": "fire_bowl",
+      "truth": "AABB[0,0,0]->[1,0.75,1]（整格见方 × 3/4 高）",
+      "hitboxes": [
+        {
+          "type": "shulker",
+          "position": [
+            -0.25,
+            0.0,
+            -0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            0.25,
+            0.0,
+            -0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            -0.25,
+            0.0,
+            0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        },
+        {
+          "type": "shulker",
+          "position": [
+            0.25,
+            0.0,
+            0.25
+          ],
+          "direction": "up",
+          "peek": 50,
+          "scale": 0.5,
+          "blocks_building": true,
+          "interactive": true,
+          "invisible": true,
+          "seats": []
+        }
+      ],
+      "rotation": "eight",
+      "model": "betternether:block/netherite_fire_bowl_soul_off",
+      "note": "4 个 shulker 拼成 1×0.75×1，与上游逐位相等（每个 0.5 见方 × 0.75 高，peek=50 ⇒ physicalPeek=0.5）。代价是每个火盆落地要 4 个 hitbox 实体。**未实现**：上游的 `fire` 状态（点燃/熄灭 + 亮度）。家具变体要配 `glowing_furniture` 与 events 才能点亮，本次只发布未点燃外观 —— 改法见 furniture.py 的 TODO（variant=lit + flint_and_steel）。"
+    }
+  ]
+}

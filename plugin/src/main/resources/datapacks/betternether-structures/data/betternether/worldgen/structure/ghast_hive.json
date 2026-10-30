@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:jigsaw",
+  "biomes": "#betternether:has_structure/ghast_hive",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none",
+  "start_pool": "betternether:ghast_hive/start",
+  "size": 1,
+  "start_height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+      "absolute": 95
+    },
+    "max_inclusive": {
+      "absolute": 99
+    }
+  },
+  "max_distance_from_center": 48,
+  "use_expansion_hack": false
+}

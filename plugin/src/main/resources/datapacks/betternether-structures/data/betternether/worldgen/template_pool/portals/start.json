@@ -1,0 +1,24 @@
+{
+  "name": "betternether:portals/start",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:portals/portal_01",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:portals/portal_02",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

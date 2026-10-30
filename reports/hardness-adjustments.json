@@ -1,0 +1,137 @@
+{
+  "blocks": [
+    {
+      "id": "betternether:blue_obsidian_glass",
+      "class": "BlockObsidianGlass",
+      "upstream": 50.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:obsidian_glass",
+      "class": "BlockObsidianGlass",
+      "upstream": 50.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_black",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_blue",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_brown",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_cyan",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_gray",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_green",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_light_blue",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_light_gray",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_lime",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_magenta",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_orange",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_pink",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_purple",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_red",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_white",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    },
+    {
+      "id": "betternether:quartz_glass_framed_yellow",
+      "class": "BaseGlassBlock",
+      "upstream": 3.0,
+      "applied": 0.3,
+      "reference": "minecraft:glass 0.3（上游硬度来自整块属性拷贝，玻璃材质见 GlassBlockTrait）"
+    }
+  ]
+}

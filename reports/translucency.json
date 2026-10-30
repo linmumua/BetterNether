@@ -1,0 +1,2051 @@
+{
+  "blocks": [
+    {
+      "id": "betternether:anchor_tree_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/anchor_tree_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:anchor_tree_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/anchor_tree_crafting_table_bottom",
+        "betternether:block/anchor_tree_crafting_table_side",
+        "betternether:block/anchor_tree_crafting_table_front",
+        "betternether:block/anchor_tree_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:anchor_tree_leaves",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/anchor_tree_vine",
+        "betternether:block/anchor_tree_leaves_2"
+      ],
+      "translucent_refs": [
+        "betternether:block/anchor_tree_vine",
+        "betternether:block/anchor_tree_leaves_2"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:anchor_tree_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/anchor_tree_log_top",
+        "betternether:block/anchor_tree_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:anchor_tree_planks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/anchor_tree_planks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:anchor_tree_stripped_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/anchor_tree_stripped_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:anchor_tree_stripped_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/anchor_tree_stripped_log_top",
+        "betternether:block/anchor_tree_stripped_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:basalt_bricks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/basalt_bricks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:bleached_gloomsculk",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "minecraft:block/sculk",
+        "betternether:block/bleached_gloomsculk_side",
+        "betternether:block/bleached_gloomsculk_top"
+      ],
+      "translucent_refs": [],
+      "missing": [
+        "minecraft:block/sculk"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:blue_crying_obsidian",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/blue_crying_obsidian"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:blue_obsidian",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/blue_obsidian"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:blue_obsidian_bricks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/blue_obsidian_bricks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:blue_obsidian_glass",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/blue_obsidian_glass"
+      ],
+      "translucent_refs": [
+        "betternether:block/blue_obsidian_glass"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:blue_obsidian_rod_tiles",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/blue_obsidian_rod_tiles"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:blue_obsidian_tile",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/blue_obsidian_tile"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:blue_obsidian_tile_small",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/blue_obsidian_tile_small"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:blue_weeping_obsidian",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/blue_weeping_obsidian"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:bone_block",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/bone_block"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:bone_tile",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/bone_slab_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:ceiling_mushrooms",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/ceiling_mushrooms_side",
+        "betternether:block/ceiling_mushrooms_bottom",
+        "minecraft:block/netherrack"
+      ],
+      "translucent_refs": [],
+      "missing": [
+        "minecraft:block/netherrack"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:cincinnasite_block",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/cincinnasite"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:cincinnasite_bricks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/cincinnasite_bricks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:cincinnasite_bricks_pillar",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/cincinnasite_bricks_side",
+        "betternether:block/cincinnasite_bricks_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:cincinnasite_carved",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/cincinnasite_spiral"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:cincinnasite_forged",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/cincinnasite_forged"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:cincinnasite_frame",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/cincinnasite_panel"
+      ],
+      "translucent_refs": [
+        "betternether:block/cincinnasite_panel"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:cincinnasite_lantern",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/cincinnasite_lantern"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:cincinnasite_ore",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/cincinnasite_ore"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:cincinnasite_pillar",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/cincinnasite_forged",
+        "betternether:block/cincinnasite_plate_up",
+        "betternether:block/cincinnasite_pillar_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:cincinnasite_tile_large",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/cincinnasite_plate_up"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:cincinnasite_tile_small",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/cincinnasite_tiles_small"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:crimson_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/crimson_crafting_table_bottom",
+        "betternether:block/crimson_crafting_table_side",
+        "betternether:block/crimson_crafting_table_front",
+        "betternether:block/crimson_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:farmland",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/farmland_side",
+        "betternether:block/farmland_soil",
+        "betternether:block/farmland_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomsculk_geode",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/gloomsculk_geode_side",
+        "betternether:block/gloomsculk_geode_top",
+        "minecraft:block/sculk",
+        "betternether:block/gloomsculk_geode_core"
+      ],
+      "translucent_refs": [
+        "betternether:block/gloomsculk_geode_side",
+        "betternether:block/gloomsculk_geode_top"
+      ],
+      "missing": [
+        "minecraft:block/sculk"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomsculk_lamp",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/gloomsculk_geode_side",
+        "betternether:block/gloomsculk_geode_top",
+        "minecraft:block/sculk",
+        "betternether:block/gloomsculk_lamp_core"
+      ],
+      "translucent_refs": [
+        "betternether:block/gloomsculk_geode_side",
+        "betternether:block/gloomsculk_geode_top"
+      ],
+      "missing": [
+        "minecraft:block/sculk"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_bleached_leaves",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/gloomwood_bleached_leaves"
+      ],
+      "translucent_refs": [
+        "betternether:block/gloomwood_bleached_leaves"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_crafting_table_bottom",
+        "betternether:block/gloomwood_crafting_table_side",
+        "betternether:block/gloomwood_crafting_table_front",
+        "betternether:block/gloomwood_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_dark_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_dark_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_dark_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_dark_crafting_table_bottom",
+        "betternether:block/gloomwood_dark_crafting_table_side",
+        "betternether:block/gloomwood_dark_crafting_table_front",
+        "betternether:block/gloomwood_dark_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_dark_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_dark_log_top",
+        "betternether:block/gloomwood_dark_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_dark_molten_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_dark_molten_log_top",
+        "betternether:block/gloomwood_dark_molten_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_dark_planks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_dark_planks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_dark_stripped_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_dark_stripped_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_dark_stripped_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_dark_stripped_log_top",
+        "betternether:block/gloomwood_dark_stripped_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_leaves",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/gloomwood_leaves"
+      ],
+      "translucent_refs": [
+        "betternether:block/gloomwood_leaves"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_log_top",
+        "betternether:block/gloomwood_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_planks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_planks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_stripped_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_stripped_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_stripped_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_stripped_log_top",
+        "betternether:block/gloomwood_stripped_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_transition_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_transition_log_top",
+        "betternether:block/gloomwood_transition_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_transition_planks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_dark_planks",
+        "betternether:block/gloomwood_transition_planks",
+        "betternether:block/gloomwood_planks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:gloomwood_transition_stripped_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/gloomwood_transition_stripped_log_top",
+        "betternether:block/gloomwood_transition_stripped_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:jungle_grass",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/jungle_grass_side",
+        "minecraft:block/netherrack",
+        "betternether:block/jungle_grass_top"
+      ],
+      "translucent_refs": [],
+      "missing": [
+        "minecraft:block/netherrack"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:molten_gloomsculk",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "minecraft:block/sculk",
+        "betternether:block/molten_gloomsculk_side",
+        "betternether:block/molten_gloomsculk_top"
+      ],
+      "translucent_refs": [],
+      "missing": [
+        "minecraft:block/sculk"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:mushroom_fir_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/mushroom_fir_bark"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:mushroom_fir_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/mushroom_fir_crafting_table_bottom",
+        "betternether:block/mushroom_fir_crafting_table_side",
+        "betternether:block/mushroom_fir_crafting_table_front",
+        "betternether:block/mushroom_fir_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:mushroom_fir_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/mushroom_fir_bark",
+        "betternether:block/mushroom_fir_log_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:mushroom_fir_planks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/mushroom_fir_planks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:mushroom_fir_stripped_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/mushroom_fir_bark"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:mushroom_fir_stripped_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/mushroom_fir_stripped_log_side",
+        "betternether:block/mushroom_fir_stripped_log_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:mushroom_grass",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/mushroom_grass_side",
+        "minecraft:block/netherrack",
+        "betternether:block/mushroom_grass_top"
+      ],
+      "translucent_refs": [],
+      "missing": [
+        "minecraft:block/netherrack"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_brick_tile_large",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_brick_tile_large"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_brick_tile_small",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_brick_tile_small"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_lapis_ore",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_lapis_ore"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_mushroom_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_mushroom_crafting_table_bottom",
+        "betternether:block/nether_mushroom_crafting_table_side",
+        "betternether:block/nether_mushroom_crafting_table_front",
+        "betternether:block/nether_mushroom_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_mushroom_planks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_mushroom_planks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_mycelium",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_mycelium_side",
+        "minecraft:block/netherrack",
+        "betternether:block/nether_mycelium_top"
+      ],
+      "translucent_refs": [],
+      "missing": [
+        "minecraft:block/netherrack"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_redstone_ore",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_redstone_ore"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_reed_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_reed_crafting_table_bottom",
+        "betternether:block/nether_reed_crafting_table_side",
+        "betternether:block/nether_reed_crafting_table_front",
+        "betternether:block/nether_reed_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_reed_planks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_reed_planks",
+        "betternether:block/nether_reed_planks_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_reed_roof",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_reed_roof"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_ruby_block",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_ruby_block"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_ruby_ore",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_ruby_ore"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_sakura_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_sakura_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_sakura_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_sakura_crafting_table_bottom",
+        "betternether:block/nether_sakura_crafting_table_side",
+        "betternether:block/nether_sakura_crafting_table_front",
+        "betternether:block/nether_sakura_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_sakura_leaves",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/nether_sakura_leaves_2",
+        "betternether:block/nether_sakura_leaves_side"
+      ],
+      "translucent_refs": [
+        "betternether:block/nether_sakura_leaves_2",
+        "betternether:block/nether_sakura_leaves_side"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_sakura_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_sakura_log_side",
+        "betternether:block/nether_sakura_log_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_sakura_planks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_sakura_planks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_sakura_stripped_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_sakura_stripped_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:nether_sakura_stripped_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_sakura_stripped_log_side",
+        "betternether:block/nether_sakura_stripped_log_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:netherrack_moss",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/nether_moss_side",
+        "minecraft:block/netherrack",
+        "betternether:block/nether_moss_top"
+      ],
+      "translucent_refs": [],
+      "missing": [
+        "minecraft:block/netherrack"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:obsidian_bricks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/obsidian_bricks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:obsidian_glass",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/obsidian_glass"
+      ],
+      "translucent_refs": [
+        "betternether:block/obsidian_glass"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:obsidian_rod_tiles",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/obsidian_rod_tiles"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:obsidian_tile",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/obsidian_tile"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:obsidian_tile_small",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/obsidian_tile_small"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_glass"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_glass"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_black",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_black"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_black"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_blue",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_blue"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_blue"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_brown",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_brown"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_brown"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_cyan",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_cyan"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_cyan"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_glass_framed"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_glass_framed"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_black",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_black"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_black"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_blue",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_blue"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_blue"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_brown",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_brown"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_brown"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_cyan",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_cyan"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_cyan"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_gray",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_gray"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_gray"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_green",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_green"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_green"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_light_blue",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_light_blue"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_light_blue"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_light_gray",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_light_gray"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_light_gray"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_lime",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_lime"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_lime"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_magenta",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_magenta"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_magenta"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_orange",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_orange"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_orange"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_pink",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_pink"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_pink"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_purple",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_purple"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_purple"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_red",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_red"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_red"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_white",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_white"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_white"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_framed_yellow",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_framed_yellow"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_framed_yellow"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_gray",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_gray"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_gray"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_green",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_green"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_green"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_light_blue",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_light_blue"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_light_blue"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_light_gray",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_light_gray"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_light_gray"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_lime",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_lime"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_lime"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_magenta",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_magenta"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_magenta"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_orange",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_orange"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_orange"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_pink",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_pink"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_pink"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_purple",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_purple"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_purple"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_red",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_red"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_red"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_white",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_white"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_white"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:quartz_glass_yellow",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/quartz_stained_glass_yellow"
+      ],
+      "translucent_refs": [
+        "betternether:block/quartz_stained_glass_yellow"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:roof_tile_cincinnasite",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/roof_tile_cincinnasite"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:roof_tile_nether_bricks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/roof_tile_nether_bricks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:rubeus_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/rubeus_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:rubeus_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/rubeus_crafting_table_bottom",
+        "betternether:block/rubeus_crafting_table_side",
+        "betternether:block/rubeus_crafting_table_front",
+        "betternether:block/rubeus_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:rubeus_leaves",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/rubeus_leaves"
+      ],
+      "translucent_refs": [
+        "betternether:block/rubeus_leaves"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:rubeus_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/rubeus_log_top",
+        "betternether:block/rubeus_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:rubeus_planks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/rubeus_planks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:rubeus_stripped_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/rubeus_stripped_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:rubeus_stripped_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/rubeus_stripped_log_side",
+        "betternether:block/rubeus_stripped_log_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:sepia_mushroom_grass",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/sepia_mushroom_grass_side",
+        "minecraft:block/netherrack",
+        "betternether:block/sepia_mushroom_grass_top"
+      ],
+      "translucent_refs": [],
+      "missing": [
+        "minecraft:block/netherrack"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:soul_sandstone",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/soul_sandstone",
+        "betternether:block/soul_sandstone_bottom",
+        "betternether:block/soul_sandstone_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:soul_sandstone_chiseled",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/soul_sandstone_chiseled",
+        "betternether:block/soul_sandstone_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:soul_sandstone_cut",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/soul_sandstone_cut",
+        "betternether:block/soul_sandstone_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:soul_sandstone_smooth",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/soul_sandstone_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:stalagnate_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/stalagnate_bark_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:stalagnate_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/stalagnate_crafting_table_bottom",
+        "betternether:block/stalagnate_crafting_table_side",
+        "betternether:block/stalagnate_crafting_table_front",
+        "betternether:block/stalagnate_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:stalagnate_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/stalagnate_bark_side",
+        "betternether:block/stalagnate_bark_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:stalagnate_planks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/stalagnate_planks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:stalagnate_roof",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/stalagnate_roof"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:stalagnate_stripped_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/stalagnate_stripped_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:stalagnate_stripped_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/stalagnate_stripped_log_side",
+        "betternether:block/stalagnate_stripped_log_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:swampland_grass",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/swampland_grass_side",
+        "minecraft:block/netherrack",
+        "betternether:block/swampland_grass"
+      ],
+      "translucent_refs": [],
+      "missing": [
+        "minecraft:block/netherrack"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:veined_gloomsculk",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "minecraft:block/netherrack",
+        "betternether:block/veined_gloomsculk_side",
+        "betternether:block/veined_gloomsculk_top"
+      ],
+      "translucent_refs": [],
+      "missing": [
+        "minecraft:block/netherrack"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:veined_sand",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/veined_sand_side",
+        "minecraft:block/soul_sand",
+        "betternether:block/veined_sand_top"
+      ],
+      "translucent_refs": [],
+      "missing": [
+        "minecraft:block/soul_sand"
+      ],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:warped_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/warped_crafting_table_bottom",
+        "betternether:block/warped_crafting_table_side",
+        "betternether:block/warped_crafting_table_front",
+        "betternether:block/warped_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:wart_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/wart_bark"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:wart_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/wart_crafting_table_bottom",
+        "betternether:block/wart_crafting_table_side",
+        "betternether:block/wart_crafting_table_front",
+        "betternether:block/wart_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:wart_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/wart_bark",
+        "betternether:block/wart_log_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:wart_planks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/wart_planks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:wart_roof",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/wart_roof"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:wart_roots",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/wart_bark",
+        "betternether:block/wart_log_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:wart_stripped_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/wart_stripped_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:wart_stripped_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/wart_stripped_log_side",
+        "betternether:block/wart_stripped_log_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:weeping_obsidian",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/weeping_obsidian"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:whispering_gourd",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/whispering_gourd_side",
+        "betternether:block/whispering_gourd_bottom",
+        "betternether:block/whispering_gourd_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:whispering_gourd_lantern",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/whispering_gourd_side",
+        "betternether:block/whispering_gourd_bottom",
+        "betternether:block/whispering_gourd_top",
+        "betternether:block/whispering_gourd_lantern"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:willow_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/willow_bark"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:willow_crafting_table",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/willow_crafting_table_bottom",
+        "betternether:block/willow_crafting_table_side",
+        "betternether:block/willow_crafting_table_front",
+        "betternether:block/willow_crafting_table_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:willow_leaves",
+      "kind": "cutout",
+      "translucent": true,
+      "refs": [
+        "betternether:block/willow_leaves_full",
+        "betternether:block/willow_leaves_top",
+        "betternether:block/willow_leaves"
+      ],
+      "translucent_refs": [
+        "betternether:block/willow_leaves_full",
+        "betternether:block/willow_leaves_top",
+        "betternether:block/willow_leaves"
+      ],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:willow_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/willow_log_top",
+        "betternether:block/willow_bark"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:willow_planks",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/willow_planks"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:willow_roof",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/willow_roof"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:willow_stripped_bark",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/willow_stripped_log_side"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    },
+    {
+      "id": "betternether:willow_stripped_log",
+      "kind": "solid",
+      "translucent": false,
+      "refs": [
+        "betternether:block/willow_stripped_log_side",
+        "betternether:block/willow_stripped_log_top"
+      ],
+      "translucent_refs": [],
+      "missing": [],
+      "missing_local": []
+    }
+  ]
+}

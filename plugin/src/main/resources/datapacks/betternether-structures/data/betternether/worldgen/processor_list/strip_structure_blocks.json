@@ -1,0 +1,11 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraft:block_ignore",
+      "blocks": [
+        "minecraft:structure_block",
+        "minecraft:jigsaw"
+      ]
+    }
+  ]
+}

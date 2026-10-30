@@ -1,0 +1,60 @@
+{
+  "name": "betternether:pillars/start",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:pillars/pillar_01",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:pillars/pillar_02",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:pillars/pillar_03",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:pillars/pillar_04",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:pillars/pillar_05",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:pillars/pillar_06",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

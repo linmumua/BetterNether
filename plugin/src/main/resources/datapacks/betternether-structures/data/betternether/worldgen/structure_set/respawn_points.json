@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 2077824658,
+    "separation": 24,
+    "spacing": 32
+  },
+  "structures": [
+    {
+      "structure": "betternether:respawn_points",
+      "weight": 1
+    }
+  ]
+}

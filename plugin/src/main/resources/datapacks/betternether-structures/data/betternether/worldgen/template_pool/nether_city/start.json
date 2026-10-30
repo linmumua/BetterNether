@@ -1,0 +1,42 @@
+{
+  "name": "betternether:nether_city/start",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:nether_city/city_center_01",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:nether_city/city_center_02",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:nether_city/city_center_03",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:nether_city/city_center_04",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

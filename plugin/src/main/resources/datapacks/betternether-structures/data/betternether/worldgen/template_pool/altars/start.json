@@ -1,0 +1,78 @@
+{
+  "name": "betternether:altars/start",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:altars/altar_01",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:altars/altar_02",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:altars/altar_03",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:altars/altar_04",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:altars/altar_05",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:altars/altar_06",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:altars/altar_07",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:altars/altar_08",
+        "processors": "betternether:strip_structure_blocks_keep_terrain",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

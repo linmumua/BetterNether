@@ -1,0 +1,33 @@
+{
+  "name": "betternether:jungle_temples/start",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:jungle_temples/ruined_temple",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:jungle_temples/jungle_temple_altar",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "betternether:jungle_temples/jungle_temple_2",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "betternether:pyramid/start",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 10,
+      "element": {
+        "location": "betternether:pyramid/pyramid_1",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "betternether:pyramid/pyramid_2",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 6,
+      "element": {
+        "location": "betternether:pyramid/pyramid_3",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "betternether:pyramid/pyramid_4",
+        "processors": "betternether:strip_structure_blocks",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
