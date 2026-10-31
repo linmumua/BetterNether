@@ -7,7 +7,7 @@
 # 你改过的值不会被覆盖，改动前旧文件会备份为 messages.yml.bak。
 #
 # 注意：MiniMessage 的标签名不能重复嵌套自定义前缀，所以每条消息都写全前缀。
-config-version: 1
+config-version: 2
 
 # ------------------------------------------------------------------------------
 # 插件生命周期
@@ -17,6 +17,51 @@ plugin:
   enabled: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <green>已启用</green><gray>：</gray><white>下界地形、群系与矿物生成已就绪。</white>"
   # 停用时打印到控制台。
   disabled: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <gray>已停用；已取消后台任务，未落的文件写入不会被回滚。</gray>"
+
+# ------------------------------------------------------------------------------
+# 资源包释放状态消息（installPack 方法）
+# ------------------------------------------------------------------------------
+pack:
+  # 首次安装：写入 <released> 个文件。<occasion> 为时机（启动/重载），<pack> 为包名。
+  first-install: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <gray>[<occasion>] 已释放 CraftEngine 资源包 </gray><white><pack></white><gray>：</gray><yellow><released></yellow><gray> 个文件（首次安装）。</gray>"
+  # 补齐缺失文件：新增 <released>，已存在 <skipped>。
+  completed: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <gray>[<occasion>] CraftEngine 资源包 </gray><white><pack></white><gray> 已补齐缺失文件：</gray><yellow><released></yellow><gray> 个新增，</gray><yellow><skipped></yellow><gray> 个已存在。</gray>"
+  # 完整，无需写入：<skipped> 个文件均已存在。
+  unchanged: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <gray>[<occasion>] CraftEngine 资源包 </gray><white><pack></white><gray> 完整，</gray><yellow><skipped></yellow><gray> 个文件均已存在。</gray>"
+  # 未写入任何文件（异常情况）。
+  no-files: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <yellow>[<occasion>] CraftEngine 资源包 </yellow><white><pack></white><yellow> 未写入任何文件。</yellow>"
+
+# ------------------------------------------------------------------------------
+# CraftEngine 就绪检查与监听注册
+# ------------------------------------------------------------------------------
+listeners:
+  # CraftEngine 未就绪，跳过「失去支撑的植物掉落」监听。
+  breakdown-skipped: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <yellow>CraftEngine 未就绪，跳过「失去支撑的植物掉落」监听：破坏后不会掉落。修正 CE 并重启服务器后该功能才会生效。</yellow>"
+  # 已注册「失去支撑的植物掉落」监听：<count> 个方块。
+  breakdown-registered: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <green>已注册「失去支撑的植物掉落」监听</green><gray>：</gray><yellow><count></yellow><gray> 个方块失去支撑时由本插件掉落。</gray>"
+  # CraftEngine 未就绪，跳过「放置后重算方块形态」监听。
+  shape-skipped: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <yellow>CraftEngine 未就绪，跳过「放置后重算方块形态」监听：手动放置的藤/树干不会自动分段。修正 CE 并重启服务器后该功能才会生效。</yellow>"
+  # 已注册「放置后重算方块形态」监听：<count> 个方块。
+  shape-registered: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <green>已注册「放置后重算方块形态」监听</green><gray>：</gray><yellow><count></yellow><gray> 个方块放置后自动分段。</gray>"
+  # CraftEngine 未就绪，跳过「悬挂藤蔓生长」监听。
+  vine-growth-skipped: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <yellow>CraftEngine 未就绪，跳过「悬挂藤蔓生长」周期任务：藤蔓不会自动向下延伸。修正 CE 并重启服务器后该功能才会生效。</yellow>"
+  # 已注册「悬挂藤蔓生长」周期任务：周期 <period> tick。
+  vine-growth-registered: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <green>已注册「悬挂藤蔓向下延伸」监听</green><gray>：</gray><white><status></white><gray>；蹲下空手右键藤蔓可续放一株。</gray>"
+  # 藤蔓自然生长已启动的详细状态（替换 <status> 占位符）。
+  vine-growth-started: "自然生长已启动（周期 <interval> tick，每轮 <attempts> 次、几率 <chance>%），最大长度 <max-length>"
+  # 藤蔓自然生长未启动的原因（替换 <status> 占位符）。
+  vine-growth-idle: "自然生长未启动（vine.growth-attempts 或 vine.growth-chance 为 0）"
+
+# ------------------------------------------------------------------------------
+# 世界生成器就绪状态
+# ------------------------------------------------------------------------------
+generator:
+  # CraftEngine 未就绪导致无法接管世界生成时的错误消息（<refusal> 为拒绝原因）。
+  refused: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <red><refusal></red>"
+  # 上一行之后紧接着打印的提示：插件保持启用，但不会接管世界生成。
+  refused-hint: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <yellow>插件保持启用，但不会接管世界生成。</yellow><white>/betternether reload</white><yellow> 会尝试释放资源包并重新检查；若仍不就绪，请确认 CraftEngine 已加载 betternether 包（</yellow><white>/ce reload</white><yellow> 后查看日志）。</yellow>"
+  # 生成器已就绪时打印的成功消息：<biomes> 个群系已就绪。
+  ready: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <green>BetterNether：</green><yellow><biomes></yellow><gray> 个下界群系已就绪，用 </gray><white>generator=BetterNether:betternether</white><gray> 创建 NETHER 世界。</gray>"
 
 # ------------------------------------------------------------------------------
 # 启动期拒绝启用 / 无法生成世界的原因。这些是运营者必须读懂的话，

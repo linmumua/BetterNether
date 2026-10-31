@@ -154,18 +154,25 @@ public final class BetterNetherPlugin extends JavaPlugin {
         try {
             CraftEngineBridge.PackReport report = bridge.installBundledPack();
             if (report.firstInstall()) {
-                getComponentLogger().info(Component.text("[" + occasion + "] 已释放 CraftEngine 资源包 '"
-                        + report.pack() + "'：" + report.released() + " 个文件（首次安装）。"));
+                getComponentLogger().info(texts().get("pack.first-install")
+                        .replaceText(config -> config.matchLiteral("<occasion>").replacement(occasion))
+                        .replaceText(config -> config.matchLiteral("<pack>").replacement(report.pack()))
+                        .replaceText(config -> config.matchLiteral("<released>").replacement(String.valueOf(report.released()))));
             } else if (report.changed()) {
-                getComponentLogger().info(Component.text("[" + occasion + "] CraftEngine 资源包 '"
-                        + report.pack() + "' 已补齐缺失文件：" + report.released()
-                        + " 个新增，" + report.skipped() + " 个已存在。"));
+                getComponentLogger().info(texts().get("pack.completed")
+                        .replaceText(config -> config.matchLiteral("<occasion>").replacement(occasion))
+                        .replaceText(config -> config.matchLiteral("<pack>").replacement(report.pack()))
+                        .replaceText(config -> config.matchLiteral("<released>").replacement(String.valueOf(report.released())))
+                        .replaceText(config -> config.matchLiteral("<skipped>").replacement(String.valueOf(report.skipped()))));
             } else if (report.skipped() > 0) {
-                getComponentLogger().info(Component.text("[" + occasion + "] CraftEngine 资源包 '"
-                        + report.pack() + "' 完整，" + report.skipped() + " 个文件均已存在。"));
+                getComponentLogger().info(texts().get("pack.unchanged")
+                        .replaceText(config -> config.matchLiteral("<occasion>").replacement(occasion))
+                        .replaceText(config -> config.matchLiteral("<pack>").replacement(report.pack()))
+                        .replaceText(config -> config.matchLiteral("<skipped>").replacement(String.valueOf(report.skipped()))));
             } else {
-                getComponentLogger().warn(Component.text("[" + occasion + "] CraftEngine 资源包 '"
-                        + report.pack() + "' 未写入任何文件。"));
+                getComponentLogger().warn(texts().get("pack.no-files")
+                        .replaceText(config -> config.matchLiteral("<occasion>").replacement(occasion))
+                        .replaceText(config -> config.matchLiteral("<pack>").replacement(report.pack())));
             }
             return report;
         } catch (IOException error) {
@@ -187,15 +194,13 @@ public final class BetterNetherPlugin extends JavaPlugin {
      */
     private void registerBlockBreakdown() {
         if (generatorRefusal != null) {
-            getComponentLogger().warn(Component.text(
-                    "CraftEngine 未就绪，跳过「失去支撑的植物掉落」监听：破坏后不会掉落。"
-                            + "修正 CE 并重启服务器后该功能才会生效。"));
+            getComponentLogger().warn(texts().get("listeners.breakdown-skipped"));
             return;
         }
         BlockBreakdownListener listener = new BlockBreakdownListener(this);
         getServer().getPluginManager().registerEvents(listener, this);
-        getComponentLogger().info(Component.text(
-                "已注册「失去支撑的植物掉落」监听：" + listener.size() + " 个方块失去支撑时由本插件掉落。"));
+        getComponentLogger().info(texts().get("listeners.breakdown-registered")
+                .replaceText(config -> config.matchLiteral("<count>").replacement(String.valueOf(listener.size()))));
     }
 
     /**
@@ -207,15 +212,13 @@ public final class BetterNetherPlugin extends JavaPlugin {
      */
     private void registerBlockShapeOnPlace() {
         if (generatorRefusal != null) {
-            getComponentLogger().warn(Component.text(
-                    "CraftEngine 未就绪，跳过「放置后重算方块形态」监听：手动放置的藤/树干不会自动分段。"
-                            + "修正 CE 并重启服务器后该功能才会生效。"));
+            getComponentLogger().warn(texts().get("listeners.shape-skipped"));
             return;
         }
         BlockShapeOnPlaceListener listener = new BlockShapeOnPlaceListener(this);
         getServer().getPluginManager().registerEvents(listener, this);
-        getComponentLogger().info(Component.text(
-                "已注册「放置后重算方块形态」监听：" + listener.size() + " 个方块按上下邻居自动分段。"));
+        getComponentLogger().info(texts().get("listeners.shape-registered")
+                .replaceText(config -> config.matchLiteral("<count>").replacement(String.valueOf(listener.size()))));
     }
 
     /**
@@ -227,9 +230,7 @@ public final class BetterNetherPlugin extends JavaPlugin {
      */
     private void registerHangingVineGrowth() {
         if (generatorRefusal != null) {
-            getComponentLogger().warn(Component.text(
-                    "CraftEngine 未就绪，跳过「悬挂藤蔓向下延伸」监听：藤蔓不会自然生长，"
-                            + "也不能右键续放。修正 CE 并重启服务器后该功能才会生效。"));
+            getComponentLogger().warn(texts().get("listeners.vine-growth-skipped"));
             return;
         }
         HangingVineGrowthListener listener =
@@ -241,15 +242,15 @@ public final class BetterNetherPlugin extends JavaPlugin {
         hangingVineGrowth = listener;
         boolean started = listener.start();
         NetherConfig current = live.get() == null ? NetherConfig.DEFAULTS : live.get().config();
-        getComponentLogger().info(Component.text(
-                "已注册「悬挂藤蔓向下延伸」监听："
-                        + (started
-                        ? "自然生长已启动（周期 " + current.vineGrowthIntervalTicks()
-                          + " tick，每轮 " + current.vineGrowthAttempts()
-                          + " 次、几率 " + current.vineGrowthChance() + "%），"
-                          + "最大长度 " + current.vineMaxLength()
-                        : "自然生长未启动（vine.growth-attempts 或 vine.growth-chance 为 0）")
-                        + "；蹲下空手右键藤蔓可续放一株。"));
+        Component statusComponent = started
+                ? texts().get("listeners.vine-growth-started")
+                        .replaceText(config -> config.matchLiteral("<interval>").replacement(String.valueOf(current.vineGrowthIntervalTicks())))
+                        .replaceText(config -> config.matchLiteral("<attempts>").replacement(String.valueOf(current.vineGrowthAttempts())))
+                        .replaceText(config -> config.matchLiteral("<chance>").replacement(String.valueOf(current.vineGrowthChance())))
+                        .replaceText(config -> config.matchLiteral("<max-length>").replacement(String.valueOf(current.vineMaxLength())))
+                : texts().get("listeners.vine-growth-idle");
+        getComponentLogger().info(texts().get("listeners.vine-growth-registered")
+                .replaceText(config -> config.matchLiteral("<status>").replacement(statusComponent)));
     }
 
     @Override
@@ -299,11 +300,9 @@ public final class BetterNetherPlugin extends JavaPlugin {
         // CraftEngine readiness: recoverable. Record why we cannot generate, but stay enabled.
         generatorRefusal = craftEngineRefusal();
         if (generatorRefusal != null) {
-            getComponentLogger().error(Component.text(generatorRefusal));
-            getComponentLogger().error(texts().get("craftengine.not-ready-hint"));
-            getComponentLogger().warn(Component.text(
-                    "插件保持启用，但不会接管世界生成。/betternether reload 会尝试释放资源包并重新检查；"
-                            + "若仍不就绪，请确认 CraftEngine 已加载 betternether 包（/ce reload 后查看日志）。"));
+            getComponentLogger().error(texts().get("generator.refused")
+                    .replaceText(config -> config.matchLiteral("<refusal>").replacement(generatorRefusal)));
+            getComponentLogger().error(texts().get("generator.refused-hint"));
         }
 
         // 植物失去支撑时跟着掉落。CE 的支撑行为只会把方块变回空气，「掉落」在 YAML 层表达不了，
@@ -344,9 +343,8 @@ public final class BetterNetherPlugin extends JavaPlugin {
         registerCommands();
 
         getComponentLogger().info(texts().get("plugin.enabled"));
-        getComponentLogger().info(Component.text("BetterNether："
-                + biomes.declared().size() + " 个下界群系已就绪，"
-                + "用 generator=BetterNether:betternether 创建 NETHER 世界。"));
+        getComponentLogger().info(texts().get("generator.ready")
+                .replaceText(config -> config.matchLiteral("<biomes>").replacement(String.valueOf(biomes.declared().size()))));
     }
 
     @Override
