@@ -153,26 +153,18 @@ public final class BetterNetherPlugin extends JavaPlugin {
         }
         try {
             CraftEngineBridge.PackReport report = bridge.installBundledPack();
+            TagResolver resolver = TagResolver.resolver(
+                    Placeholder.unparsed("pack", report.pack()),
+                    Placeholder.unparsed("released", String.valueOf(report.released())),
+                    Placeholder.unparsed("skipped", String.valueOf(report.skipped())));
             if (report.firstInstall()) {
-                getComponentLogger().info(texts().get("pack.first-install")
-                        .replaceText(config -> config.matchLiteral("<occasion>").replacement(occasion))
-                        .replaceText(config -> config.matchLiteral("<pack>").replacement(report.pack()))
-                        .replaceText(config -> config.matchLiteral("<released>").replacement(String.valueOf(report.released()))));
+                getComponentLogger().info(texts().get("pack.first-install", resolver));
             } else if (report.changed()) {
-                getComponentLogger().info(texts().get("pack.completed")
-                        .replaceText(config -> config.matchLiteral("<occasion>").replacement(occasion))
-                        .replaceText(config -> config.matchLiteral("<pack>").replacement(report.pack()))
-                        .replaceText(config -> config.matchLiteral("<released>").replacement(String.valueOf(report.released())))
-                        .replaceText(config -> config.matchLiteral("<skipped>").replacement(String.valueOf(report.skipped()))));
+                getComponentLogger().info(texts().get("pack.completed", resolver));
             } else if (report.skipped() > 0) {
-                getComponentLogger().info(texts().get("pack.unchanged")
-                        .replaceText(config -> config.matchLiteral("<occasion>").replacement(occasion))
-                        .replaceText(config -> config.matchLiteral("<pack>").replacement(report.pack()))
-                        .replaceText(config -> config.matchLiteral("<skipped>").replacement(String.valueOf(report.skipped()))));
+                getComponentLogger().info(texts().get("pack.unchanged", resolver));
             } else {
-                getComponentLogger().warn(texts().get("pack.no-files")
-                        .replaceText(config -> config.matchLiteral("<occasion>").replacement(occasion))
-                        .replaceText(config -> config.matchLiteral("<pack>").replacement(report.pack())));
+                getComponentLogger().warn(texts().get("pack.no-files", resolver));
             }
             return report;
         } catch (IOException error) {
@@ -194,13 +186,12 @@ public final class BetterNetherPlugin extends JavaPlugin {
      */
     private void registerBlockBreakdown() {
         if (generatorRefusal != null) {
-            getComponentLogger().warn(texts().get("listeners.breakdown-skipped"));
-            return;
+            return; // 由 generator.paused 一行统一说明
         }
         BlockBreakdownListener listener = new BlockBreakdownListener(this);
         getServer().getPluginManager().registerEvents(listener, this);
-        getComponentLogger().info(texts().get("listeners.breakdown-registered")
-                .replaceText(config -> config.matchLiteral("<count>").replacement(String.valueOf(listener.size()))));
+        getComponentLogger().info(texts().get("listeners.breakdown-registered",
+                Placeholder.unparsed("count", String.valueOf(listener.size()))));
     }
 
     /**
@@ -212,13 +203,12 @@ public final class BetterNetherPlugin extends JavaPlugin {
      */
     private void registerBlockShapeOnPlace() {
         if (generatorRefusal != null) {
-            getComponentLogger().warn(texts().get("listeners.shape-skipped"));
-            return;
+            return; // 由 generator.paused 一行统一说明
         }
         BlockShapeOnPlaceListener listener = new BlockShapeOnPlaceListener(this);
         getServer().getPluginManager().registerEvents(listener, this);
-        getComponentLogger().info(texts().get("listeners.shape-registered")
-                .replaceText(config -> config.matchLiteral("<count>").replacement(String.valueOf(listener.size()))));
+        getComponentLogger().info(texts().get("listeners.shape-registered",
+                Placeholder.unparsed("count", String.valueOf(listener.size()))));
     }
 
     /**
@@ -230,8 +220,7 @@ public final class BetterNetherPlugin extends JavaPlugin {
      */
     private void registerHangingVineGrowth() {
         if (generatorRefusal != null) {
-            getComponentLogger().warn(texts().get("listeners.vine-growth-skipped"));
-            return;
+            return; // 由 generator.paused 一行统一说明
         }
         HangingVineGrowthListener listener =
                 new HangingVineGrowthListener(this, () -> {
@@ -242,15 +231,15 @@ public final class BetterNetherPlugin extends JavaPlugin {
         hangingVineGrowth = listener;
         boolean started = listener.start();
         NetherConfig current = live.get() == null ? NetherConfig.DEFAULTS : live.get().config();
-        Component statusComponent = started
-                ? texts().get("listeners.vine-growth-started")
-                        .replaceText(config -> config.matchLiteral("<interval>").replacement(String.valueOf(current.vineGrowthIntervalTicks())))
-                        .replaceText(config -> config.matchLiteral("<attempts>").replacement(String.valueOf(current.vineGrowthAttempts())))
-                        .replaceText(config -> config.matchLiteral("<chance>").replacement(String.valueOf(current.vineGrowthChance())))
-                        .replaceText(config -> config.matchLiteral("<max-length>").replacement(String.valueOf(current.vineMaxLength())))
+        Component status = started
+                ? texts().get("listeners.vine-growth-started",
+                        Placeholder.unparsed("interval", String.valueOf(current.vineGrowthIntervalTicks())),
+                        Placeholder.unparsed("attempts", String.valueOf(current.vineGrowthAttempts())),
+                        Placeholder.unparsed("chance", String.valueOf(current.vineGrowthChance())),
+                        Placeholder.unparsed("max-length", String.valueOf(current.vineMaxLength())))
                 : texts().get("listeners.vine-growth-idle");
-        getComponentLogger().info(texts().get("listeners.vine-growth-registered")
-                .replaceText(config -> config.matchLiteral("<status>").replacement(statusComponent)));
+        getComponentLogger().info(texts().get("listeners.vine-growth-registered",
+                Placeholder.component("status", status)));
     }
 
     @Override
@@ -285,7 +274,7 @@ public final class BetterNetherPlugin extends JavaPlugin {
         // Release the bundled pack as early as it can possibly work (CraftEngine is enabled by now,
         // thanks to `load: BEFORE`). A missing or half-written pack is the most common reason the
         // blocks below are unregistered, so repairing it first turns a mystery into a plain start.
-        installPack("启动");
+        CraftEngineBridge.PackReport startupPack = installPack("启动");
 
         // Resolve biomes: this only depends on our own datapack, which is already registered.
         NetherBiomes.Resolution resolution = NetherBiomes.resolve();
@@ -298,11 +287,13 @@ public final class BetterNetherPlugin extends JavaPlugin {
         biomes = (NetherBiomes.Resolved) resolution;
 
         // CraftEngine readiness: recoverable. Record why we cannot generate, but stay enabled.
+        // craftEngineRefusal() already logged the reason; here we add one fix hint and one summary.
         generatorRefusal = craftEngineRefusal();
         if (generatorRefusal != null) {
-            getComponentLogger().error(texts().get("generator.refused")
-                    .replaceText(config -> config.matchLiteral("<refusal>").replacement(generatorRefusal)));
-            getComponentLogger().error(texts().get("generator.refused-hint"));
+            boolean justReleased = startupPack != null && startupPack.firstInstall();
+            getComponentLogger().warn(texts().get(justReleased
+                    ? "craftengine.first-install-hint" : "craftengine.not-ready-hint"));
+            getComponentLogger().warn(texts().get("generator.paused"));
         }
 
         // 植物失去支撑时跟着掉落。CE 的支撑行为只会把方块变回空气，「掉落」在 YAML 层表达不了，
@@ -342,9 +333,10 @@ public final class BetterNetherPlugin extends JavaPlugin {
 
         registerCommands();
 
-        getComponentLogger().info(texts().get("plugin.enabled"));
-        getComponentLogger().info(texts().get("generator.ready")
-                .replaceText(config -> config.matchLiteral("<biomes>").replacement(String.valueOf(biomes.declared().size()))));
+        if (generatorRefusal == null) {
+            getComponentLogger().info(texts().get("plugin.enabled",
+                    Placeholder.unparsed("biomes", String.valueOf(biomes.declared().size()))));
+        }
     }
 
     @Override
@@ -435,8 +427,8 @@ public final class BetterNetherPlugin extends JavaPlugin {
         // baked: handing out a generator now would write terrain that is missing every custom block.
         String blocked = generatorRefusal;
         if (blocked != null) {
-            getLogger().severe("BetterNether 拒绝为世界 '" + worldName + "' 生成：" + blocked
-                    + " 服务器会回退原版生成器；请修正后重新生成该世界。");
+            getLogger().severe("世界 '" + worldName + "' 回退原版生成器：CraftEngine 未就绪（见上方原因）。"
+                    + "修复后需删除该世界的区域文件重新生成。");
             return null;
         }
         try {
