@@ -765,6 +765,25 @@ POOL_BUDGET = {
 CUTOUT_POOLS = ["non_tintable_leaves", "tintable_leaves"]
 
 
+#: 需要**按几何段位保留多个外观**的方块 → 最少外观数。
+#:
+#: 为什么要单独一张表，而不是把 `shape` 统一并入 `floor`：`floor` 是全局的，
+#: 一旦把段位数算进去，所有多段植物都会向可爬藤蔓池多要槽位，而该池在线上已用尽
+#: （cave_vine/weeping_vine/twisting_vine 余量均为 0），必然 SystemExit。
+#: 所以只给「走 pressure_plate 等有余量的池、且各段确实用不同模型」的方块单独开口子。
+#:
+#: `gloomwisp_vine` 依据上游 `blockstates/gloomwisp_vine.json`：
+#:   shape=bottom          → gloomwisp_vine_t4
+#:   shape=middle          → gloomwisp_vine_t3
+#:   shape=top,spent=false → 加权随机 [gloomwisp_vine_head, _t0, _t1, _t2]
+#:   shape=top,spent=true  → gloomwisp_vine_t5
+#: 四段模型互不相同，合并成 1 个就等于顶端的「小鬼头」永远不出现
+#: （用户 2026-10-31 报的「幽光藤头部显示不正确」）。
+STRUCTURAL_APPEARANCE_FLOOR: dict[str, int] = {
+    "gloomwisp_vine": 4,
+}
+
+
 def pool_budget() -> dict[str, int]:
     """每个池留给本包的槽位数（`POOL_BUDGET` 的副本，调用方可安全扣减）。"""
     return dict(POOL_BUDGET)
@@ -1010,7 +1029,11 @@ def merge_plant_appearances(spec: dict, keep: int) -> dict:
     # lumabus_vine 的 top 要用 roots、middle 要用 vine、bottom 才是 bulb）在不同 shape 段位上
     # 用的是**完全不同的模型**。若只按“差异最大”挑，额度小时容易把不同段位挤掉、只剩底部段，
     # 表现为“整棵藤全长一个样、顶端没有头/果实”。这里先按结构签名去重保底，保证每个段位至少留一个。
-    _STRUCTURAL_PROPS = ("shape", "top", "bottom")
+    # `spent` 也进结构签名：对唯一使用它的 gloomwisp_vine，spent=false 与 true 是
+    # **完全不同的模型**（false → 加权[head,t0,t1,t2]，true → t5），合并掉会让
+    # 「已消耗」状态显示成发光的生长头。全包里只有这一个方块带 spent（实测），
+    # 所以影响面就是它自己。
+    _STRUCTURAL_PROPS = ("shape", "top", "bottom", "spent")
 
     def structural_signature(name: str) -> tuple:
         """外观对应的结构段位签名（只看 shape/top/bottom 这些决定几何的属性）。"""
@@ -1071,7 +1094,12 @@ def merge_plant_appearances(spec: dict, keep: int) -> dict:
         scores.sort()
         return scores[0][2]
 
-    merged_from = [name for name, _ in appearances[keep:]]
+    # **不能**用 `appearances[keep:]` 切片：保留下来的外观是按「与已保留项差异最大」
+    # 挑出来的（见上面的 chosen_names），不是前 keep 个。用切片的话，被选中的项如果
+    # 落在切片范围内就会被写进 redirect，于是它自己的 variants 键被重定向到**别人**，
+    # 指向一个已经被删掉的 appearance 名 —— 表现为「变体引用了不存在的外观」
+    # （2026-10-31 门禁抓到的 gloomwisp_vine `shape=top,spent=true,vine_dir=east`）。
+    merged_from = [name for name, _ in appearances if name not in set(chosen_names)]
     redirect = {name: pick_target(name) for name in merged_from}
     spec["variants"] = [(key, redirect.get(app, app)) for key, app in spec["variants"]]
     spec["appearances"] = kept
@@ -4619,7 +4647,8 @@ def main() -> int:
                         axis_values = {part.split("=", 1)[1]
                                        for key, _app in spec["variants"]
                                        for part in key.split(",") if part.startswith("axis=")}
-                        floor = max(1, len(axis_values))
+                        structural = STRUCTURAL_APPEARANCE_FLOOR.get(name, 1)
+                        floor = max(1, len(axis_values), structural)
                         keep = allocator.quota(slot_family, appearances_before, pending,
                                                floor=floor, released=floor - 1,
                                                pinned_free=pinned.remaining())

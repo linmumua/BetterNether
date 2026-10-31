@@ -137,6 +137,11 @@ FURNITURE_FAMILIES: tuple[dict, ...] = (
         "rotation": "eight",
         # 上游没有 `*_fire_bowl.json`，只有 `*_fire_bowl_off/on`；家具发布的是未点燃外观。
         "item_stem": "{name}_off",
+        # 模型自身 y 范围 0~0.75（实测 `*_fire_bowl_off.json` 的 elements：from.y 全 0，
+        # to.y 最大 12/16）。CE 的物品展示实体把模型**几何中心**对齐到原点，所以要让
+        # 模型底边落在方块底面，必须向上平移 `高度 / 2`（官方 bench/wooden_chair 的
+        # 1×1×1 模型用的正是 `translation: 0,0.5,0`）。
+        "model_height": 0.75,
         "note": "4 个 shulker 拼成 1×0.75×1，与上游逐位相等（每个 0.5 见方 × 0.75 高，"
                 "peek=50 ⇒ physicalPeek=0.5）。代价是每个火盆落地要 4 个 hitbox 实体。"
                 "**未实现**：上游的 `fire` 状态（点燃/熄灭 + 亮度）。家具变体要配 "
@@ -147,6 +152,8 @@ FURNITURE_FAMILIES: tuple[dict, ...] = (
         "name": "pedestal",
         "blocks": ("cincinnasite_pedestal",),
         "truth": "AABB[0.125,0,0.125]->[0.875,1,0.875]（12/16 见方 × 1 高）",
+        # 模型 y 范围 0~1（实测 `cincinnasite_pedestal.json`），平移半格与官方 1×1×1 家具一致。
+        "model_height": 1.0,
         # 12/16 见方、1 高：h/s = 1.3333 ⇒ physicalPeek=0.3333 ⇒ peek=39。
         "hitboxes": [shulker(scale=0.75, peek=peek_for(0.75, 1.0))],
         "rotation": "eight",
@@ -157,6 +164,9 @@ FURNITURE_FAMILIES: tuple[dict, ...] = (
     {
         "name": "pot",
         "blocks": ("brick_pot", "cincinnasite_pot"),
+        # 两个 pot 都经 parent 链解析后 y 范围 0~0.5（`brick_pot` → `cincinnasite_pot`），
+        # 平移 1/4 格即可让底边落在地面。
+        "model_height": 0.5,
         "truth": "AABB[0.1875,0,0.1875]->[0.8125,0.5,0.8125]（10/16 见方 × 1/2 高）",
         # 5/8 见方 × 1/2 高：h < s，任何 scale 都给不出方形底 + 更矮的高度。
         "hitboxes": [shulker(scale=0.5, peek=0)],
@@ -263,6 +273,12 @@ def furniture_item_yaml(block_id: str, family: dict, *,
         f"            loot_spawn_offset: {spawn}\n"
         f"            elements:\n"
         f"              - item: {block_id}\n"
+        # CE 的物品展示实体把模型**几何中心**对齐到家具原点，所以任何底边贴地的模型
+        # 都会下沉「自身高度的一半」。官方 `default:bench` / `wooden_chair`（1×1×1）
+        # 就是用 `translation: 0,0.5,0` 抵掉的。这里按族的真实模型高度算，不写死 0.5：
+        # 火盆 0.75 → 0.375、基座 1.0 → 0.5、陶罐 0.5 → 0.25。
+        # 不写死是因为写错会让家具一半埋进地里（用户 2026-10-31 实测「火盆卡在地下」）。
+        f"                translation: 0,{family['model_height'] / 2:g},0\n"
         f"                display_transform: none\n"
         f"                billboard: fixed\n"
         f"                shadow_radius: 0.4\n"

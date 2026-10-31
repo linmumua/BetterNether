@@ -144,6 +144,15 @@ REMOVED_BLOCK_IDS: frozenset[str] = frozenset({
     # 任何 worldgen / 结构 / 配方引用它 —— 它的去留由 blocks.py 的「无引用不发布」规则决定。
     "betternether:neon_equisetum",
     "betternether:soul_lily",
+    # 用户 2026-10-31 要求「仙人掌删除」。两种仙人掌一并移除：
+    #   * `nether_cactus` —— 世界生成主入口（`patch_nether_cactus`、砾石沙漠的
+    #     `vegetation_nether_gravel_desert` 与 `gravel_desert` 群系都引用它）；
+    #   * `barrel_cactus` —— 同属仙人掌族，留在包里会出现「有仙人掌、也有另一种仙人掌」
+    #     的不一致。
+    # 上游这两个方块都有 `age`/`top` 生长状态，CE 侧只发单档，本来也表达不了生长，
+    # 删除比留半截更干净。
+    "betternether:nether_cactus",
+    "betternether:barrel_cactus",
     # 用户 2026-10-27 批复「灵芝一起删」：灵芝、巨灵芝、灵芝孢子三个全部移除。
     # 这三个是同一套素材（孢子长成灵芝、灵芝长成巨灵芝），只删其中一个会留下
     # 「能拿到但没用途 / 有配方却缺原料」的孤儿条目，所以按用户的口径整组删除。

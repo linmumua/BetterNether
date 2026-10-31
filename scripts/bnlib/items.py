@@ -358,6 +358,10 @@ class ItemPlan:
     texture: str | None
     tags: tuple[str, ...] = ()
     model: str | None = None
+    #: 装备资源 id（`betternether:nether_ruby` 之类）。只有盔甲四件套有值。
+    #: 上游把「盔甲贴图」放在 `equipment/<材质>.json` 里，CE 侧必须成对写出
+    #: `equipments:` 段并在物品上引用 `settings.equipment.asset_id`，否则穿上是透明的。
+    equipment: str | None = None
 
 
 def _tier_of(item_id: str) -> tuple[str, str] | None:
@@ -492,9 +496,37 @@ def plan_items(upstream: Path, ce_root: Path,
                 tags=(tag,) if tag else (),
                 model=(f"{NAMESPACE}:item/{item_id}"
                        if _item_model_exists(upstream, item_id) else None),
+                # 盔甲四件套挂上装备资源：上游 `equipment/<材质>.json` 声明了
+                # humanoid / humanoid_leggings 两层贴图，材质名就是 id 去掉 `_helmet` 等后缀。
+                equipment=_equipment_asset(upstream, item_id),
             ))
 
     return plans, skipped
+
+
+#: 盔甲四件套的后缀 → 装备资源的层。`humanoid` 覆盖头盔/胸甲/靴子，
+#: `humanoid_leggings` 只给护腿（原版就是这么分的）。
+_ARMOR_SUFFIXES = ("helmet", "chestplate", "leggings", "boots")
+
+
+def _equipment_asset(upstream: Path, item_id: str) -> str | None:
+    """这个物品要挂的装备资源 id；非盔甲或上游没有对应 equipment 文件时返回 None。
+
+    判定只用**上游真实存在的文件**（`assets/<ns>/equipment/<材质>.json`），
+    不按 id 前缀猜：上游的材质名（cincinnasite / flaming_ruby / nether_ruby）
+    恰好等于 id 去掉后缀，但这一点必须由文件存在来确认，否则会写出一个
+    指向不存在资源的 `asset_id` —— 那种情况 CE 不报错，穿上就是透明。
+    """
+    for suffix in _ARMOR_SUFFIXES:
+        if not item_id.endswith("_" + suffix):
+            continue
+        material = item_id[: -len(suffix) - 1]
+        for base in ("src/main/generated", "src/main/resources"):
+            candidate = upstream / base / "assets" / NAMESPACE / "equipment" / f"{material}.json"
+            if candidate.is_file():
+                return f"{NAMESPACE}:{material}"
+        return None
+    return None
 
 
 def _item_model_exists(upstream: Path, item_id: str) -> bool:
@@ -508,10 +540,19 @@ def _item_block(plan: ItemPlan) -> str:
     if plan.carrier:
         lines.append(f"    material: {plan.carrier}")
     lines.append(f"    category: {plan.category}")
+    settings: list[str] = []
     if plan.tags:
+        settings.append("      tags:")
+        settings.extend(f"        - {tag}" for tag in plan.tags)
+    if plan.equipment:
+        # CE 的 `settings.equipment.asset_id` 指向 `equipments:` 段里的资源 id。
+        # 少了这一行，盔甲仍然能穿（原版 equippable 还在），但用的是原版材质贴图
+        # —— 用户 2026-10-31 报的「nether 盔甲没有 3D 材质」就是这个。
+        settings.append("      equipment:")
+        settings.append(f"        asset_id: {plan.equipment}")
+    if settings:
         lines.append("    settings:")
-        lines.append("      tags:")
-        lines.extend(f"        - {tag}" for tag in plan.tags)
+        lines.extend(settings)
     lines.append("    data:")
     lines.append(f"      item_name: '<!i><white><lang:item.{NAMESPACE}.{plan.item_id}></white>'")
     if plan.model:
@@ -1146,9 +1187,16 @@ def items_yaml(upstream: Path, ce_root: Path, extra: Iterable[str] = ()
         recipe_lines += _group_banner("烧制配方（ore_drops.py：熔炉 200t、高炉 100t）")
         recipe_lines += "".join(ore_recipes)
 
+    # 装备资源：盔甲贴图不在物品模型里，而在 `equipments:` 段声明的 humanoid 层。
+    # 不写这段、或物品的 `settings.equipment.asset_id` 指不到这里，穿上就是透明
+    # （用户 2026-10-31 报的「nether 盔甲没有材质」）。
+    equipment_lines = _equipments_section(plans)
+
     item_rows = item_lines.splitlines(keepends=True)
     recipe_rows = recipe_lines.splitlines(keepends=True)
-    assert_unique_sections({"items": item_rows, "recipes": recipe_rows})
+    equipment_rows = equipment_lines.splitlines(keepends=True)
+    assert_unique_sections({"items": item_rows, "recipes": recipe_rows,
+                            "equipments": equipment_rows})
 
     header = [
         "# 由 scripts/bnlib/items.py 生成，请勿手工编辑。",
@@ -1159,8 +1207,37 @@ def items_yaml(upstream: Path, ce_root: Path, extra: Iterable[str] = ()
         "# `# ===== 分组 =====` 只是注释分组，整份文件只有一对 `items:` / `recipes:` 顶层映射。",
         "items:",
     ]
-    return ("\n".join(header) + "\n" + item_lines + "recipes:\n" + recipe_lines,
-            plans, skipped, report)
+    body = "\n".join(header) + "\n" + item_lines + "recipes:\n" + recipe_lines
+    if equipment_lines:
+        body += "equipments:\n" + equipment_lines
+    return (body, plans, skipped, report)
+
+
+def _equipments_section(plans: list[ItemPlan]) -> str:
+    """盔甲贴图的装备资源段。
+
+    只写**上游真实存在**的材质（由 `_equipment_asset` 核过文件），结构抄上游
+    `equipment/<材质>.json`：humanoid 与 humanoid_leggings 两层都指向同一张图。
+    `texture` 只写不带扩展名、不带 `textures/` 前缀的 id —— 资源包里对应的文件是
+    `assets/betternether/textures/entity/equipment/<层>/<材质>.png`（assets.py 已释放）。
+    """
+    materials = sorted({plan.equipment for plan in plans if plan.equipment})
+    if not materials:
+        return ""
+    lines = ["  # 盔甲装备资源（贴图来自上游 textures/entity/equipment/）"]
+    for asset in materials:
+        material = asset.split(":", 1)[1]
+        lines.append(f"  {asset}:")
+        lines.append("    type: component")
+        # **命名空间必须是本包**：贴图在
+        # `resourcepack/assets/betternether/textures/entity/equipment/<层>/<材质>.png`，
+        # 写成 `minecraft:` 会去找原版目录，找不到就是「穿上什么都看不见」
+        # （用户 2026-10-31 实测「盔甲还是看不到」）。CE 的这两个字段收完整资源路径，
+        # 不含 `textures/` 前缀、不含扩展名。
+        lines.append(f'    humanoid: "{NAMESPACE}:entity/equipment/humanoid/{material}"')
+        lines.append("    humanoid_leggings: "
+                     f'"{NAMESPACE}:entity/equipment/humanoid_leggings/{material}"')
+    return "\n".join(lines) + "\n"
 
 
 def _group_banner(title: str) -> str:

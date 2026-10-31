@@ -174,7 +174,12 @@ public final class BlockBreakdownTable {
             "betternether:blackstone_stalactite",
             "betternether:bone_stalactite",
             "betternether:glowstone_stalactite",
-            "betternether:netherrack_stalactite");
+            "betternether:netherrack_stalactite",
+            // 幽光藤：CE 侧是 `sturdy_base_block{direction: down, stackable: true,
+            // max_height: 255}` —— 支撑来自**下方**（或下方同类型堆叠），也就是从地面往上长。
+            // 表里记的是 `both`，于是打掉上面那段时下面的也跟着塌，而它们的下方支撑
+            // （更下面那格、或最终的地面）根本没变。用户 2026-10-31 实测报的就是这个。
+            "betternether:gloomwisp_vine");
 
     private static final String DATA = """
             betternether:agave down
