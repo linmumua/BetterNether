@@ -501,7 +501,8 @@ def load_item_ids(upstream: Path) -> set[str]:
             if isinstance(entry, dict) and isinstance(entry.get("id"), str)}
 
 
-def load_registry_tags(upstream: Path, registry: str) -> dict[str, tuple[str, ...]]:
+def load_registry_tags(upstream: Path, registry: str,
+                       namespaces: tuple[str, ...] = (NAMESPACE,)) -> dict[str, tuple[str, ...]]:
     """上游 `data/betternether/tags/<registry>/**.json` -> `{成员 id: (标签 id, …)}`。
 
     `registry` 是 `item` 或 `block`。成员表就是上游 datagen 导出的那份真值：
@@ -515,21 +516,26 @@ def load_registry_tags(upstream: Path, registry: str) -> dict[str, tuple[str, ..
     `TagUtils`/`Registries.BLOCK`，只登记**方块**标签。上游对同名的两份都做了定义，
     所以两边都要声明：物品那份让配方能解析，方块那份保持上游语义。
     """
-    root = upstream / "src/main/generated/data" / NAMESPACE / "tags" / registry
     collected: dict[str, list[str]] = {}
-    for path in sorted(root.rglob("*.json")):
-        try:
-            payload = json.loads(path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            continue
-        values = payload.get("values") if isinstance(payload, dict) else None
-        if not isinstance(values, list):
-            continue
-        tag = f"{NAMESPACE}:{path.relative_to(root).with_suffix('').as_posix()}"
-        for member in values:
-            # `#其他标签` 是嵌套引用，不是成员 id（CE 的物品标签不做传递展开，不代填）。
-            if isinstance(member, str) and member and not member.startswith("#"):
-                collected.setdefault(member, []).append(tag)
+    # `namespaces` 含 `minecraft` 时同时读原版标签（planks/logs/wooden_slabs…）：
+    # 原版箱子、工作台、木棍等配方按 `#minecraft:planks` 匹配，物品不挂这些标签就合成不了。
+    for namespace in namespaces:
+        root = upstream / "src/main/generated/data" / namespace / "tags" / registry
+        for path in sorted(root.rglob("*.json")):
+            try:
+                payload = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                continue
+            values = payload.get("values") if isinstance(payload, dict) else None
+            if not isinstance(values, list):
+                continue
+            tag = f"{namespace}:{path.relative_to(root).with_suffix('').as_posix()}"
+            for member in values:
+                # `#其他标签` 是嵌套引用，不是成员 id（CE 的物品标签不做传递展开，不代填）。
+                # 只收本插件的成员：原版标签里的原版物品不归这里管。
+                if (isinstance(member, str) and member and not member.startswith("#")
+                        and member.startswith(f"{NAMESPACE}:")):
+                    collected.setdefault(member, []).append(tag)
     return {member: tuple(tags) for member, tags in collected.items()}
 
 
@@ -4022,7 +4028,7 @@ def main() -> int:
     # 上游自定义标签的成员表（`data/betternether/tags/{item,block}/**`）。配方里的
     # `#betternether:<wood>_logs` / `#betternether:flaming_ruby/repair` 只有成员自己声明过
     # 才能被解析：物品那份写进 items 段（配方读物品注册表），方块那份写进 settings.tags。
-    item_tags = load_registry_tags(upstream, "item")
+    item_tags = load_registry_tags(upstream, "item", (NAMESPACE, "minecraft"))
     block_tags = load_registry_tags(upstream, "block")
     if not tiers:
         raise SystemExit("找不到方块形状表，拒绝生成一个没有形状依据的 CE 包。")
