@@ -8,45 +8,38 @@
 #
 # 注意：MiniMessage 的标签名不能重复嵌套自定义前缀，所以每条消息都写全前缀。
 #
-# 3：精简启动日志。以下控制台消息不再带渐变前缀（控制台已有 [BetterNether]）。
-#    已有服务器的旧文案不会被覆盖；想换成新文案，删掉 messages.yml 后重启即可。
-config-version: 3
+# 4：控制台文案统一移到 console.* 并重写得更短。旧的 plugin./pack./listeners./generator./
+#    craftengine. 键不再读取，可以手动删掉；console.* 会在升级时自动补上新文案。
+config-version: 4
 
 # ------------------------------------------------------------------------------
-# 插件生命周期（控制台）
+# 控制台消息。控制台已带 [BetterNether] 前缀，这里不再重复。
 # ------------------------------------------------------------------------------
-plugin:
-  # CraftEngine 就绪、生成器可用时打印。<biomes> 为群系数量。
-  enabled: "<green>已启用</green><gray>：<white><biomes></white> 个下界群系，生成器 <white>BetterNether:betternether</white>。</gray>"
-  disabled: "<gray>已停用。</gray>"
+console:
+  # 就绪时打印。<biomes> 为群系数量。
+  enabled: "<green>已启用</green><gray>：<white><biomes></white> 个群系，生成器 <white>BetterNether:betternether</white></gray>"
+  disabled: "<gray>已停用</gray>"
 
-# ------------------------------------------------------------------------------
-# 资源包释放（控制台）。<pack> 包名，<released> 新写入数，<skipped> 已存在数。
-# ------------------------------------------------------------------------------
-pack:
-  first-install: "<gray>资源包 <white><pack></white> 已释放：<white><released></white> 个文件（首次安装）。</gray>"
-  completed: "<gray>资源包 <white><pack></white> 已补齐：新增 <white><released></white>，已有 <white><skipped></white>。</gray>"
-  unchanged: "<gray>资源包 <white><pack></white> 完整（<white><skipped></white> 个文件）。</gray>"
-  no-files: "<yellow>资源包 <white><pack></white> 未写入任何文件。</yellow>"
+  # 资源包。<pack> 包名，<released> 新写入数，<skipped> 已有数。
+  pack-first-install: "<gray>资源包 <white><pack></white>：首次释放 <white><released></white> 个文件</gray>"
+  pack-completed: "<gray>资源包 <white><pack></white>：补齐 <white><released></white> 个文件</gray>"
+  pack-unchanged: "<gray>资源包 <white><pack></white>：完整（<white><skipped></white>）</gray>"
+  pack-no-files: "<yellow>资源包 <white><pack></white>：没有写入任何文件</yellow>"
 
-# ------------------------------------------------------------------------------
-# 方块监听（控制台）。CraftEngine 未就绪时不注册，统一由 generator.paused 说明。
-# ------------------------------------------------------------------------------
-listeners:
-  # <count> 为方块种数。
-  breakdown-registered: "<gray>植物失去支撑掉落：<white><count></white> 种方块。</gray>"
-  shape-registered: "<gray>放置自动分段：<white><count></white> 种方块。</gray>"
-  # <status> 取下面两条之一。
-  vine-growth-registered: "<gray>悬挂藤蔓：<status>；蹲下空手右键可续放。</gray>"
-  vine-growth-started: "每 <interval> tick 生长 <attempts> 次、几率 <chance>%，最长 <max-length>"
-  vine-growth-idle: "自然生长关闭（growth-attempts 或 growth-chance 为 0）"
+  # 方块行为。<count> 为方块种数。
+  breakdown: "<gray>失去支撑掉落：<white><count></white> 种植物</gray>"
+  shape: "<gray>放置自动分段：<white><count></white> 种方块</gray>"
+  # <status> 取 vine-on 或 vine-off。
+  vine: "<gray>藤蔓生长：<status></gray>"
+  vine-on: "每 <white><interval></white> tick <white><attempts></white> 次 × <white><chance></white>%，最长 <white><max-length></white>"
+  vine-off: "<white>已关闭</white>"
 
-# ------------------------------------------------------------------------------
-# 世界生成器（控制台）
-# ------------------------------------------------------------------------------
-generator:
-  # CraftEngine 未就绪时，紧跟在原因与修复提示之后打印。
-  paused: "<yellow>已暂停：世界生成、植物掉落、放置分段、藤蔓生长。修复后完整重启服务器即可恢复。</yellow>"
+  # CraftEngine 未就绪。依次打印：原因、修复提示、暂停说明。
+  ce-missing: "<red>缺少前置 CraftEngine</red>"
+  ce-not-ready: "<red>CraftEngine 未注册必需方块：<missing></red>"
+  ce-first-install-hint: "<yellow>资源包刚首次释放，重启服务器一次即可</yellow>"
+  ce-not-ready-hint: "<yellow>请检查 <white>CraftEngine/resources/betternether/</white> 是否存在、<white>delay-configuration-load</white> 是否为 false，然后重启</yellow>"
+  paused: "<yellow>世界生成与方块行为已暂停，修复后重启恢复</yellow>"
 
 # ------------------------------------------------------------------------------
 # 启动期错误。插件停用不会阻止服务端生成世界：Paper/Folia 会回退原版生成器。
@@ -54,15 +47,6 @@ generator:
 config:
   # config.yml 无法读取或取值不可用：插件不会启用。
   invalid: "<gradient:#7cf0ff:#8a7cff><bold>BetterNether</bold></gradient> <dark_gray>»</dark_gray> <red>config.yml 无效，BetterNether 不可用；Paper/Folia 可能回退原版生成器，请停止服务器并修正 config.yml 后再生成世界（原文件保持不动）。</red>"
-
-craftengine:
-  missing: "<red>缺少前置 CraftEngine（未安装或未启用）。</red>"
-  # <missing> 为未注册的方块 id 列表。
-  not-ready: "<red>CraftEngine 未注册必需方块：<missing>。</red>"
-  # 资源包本次刚首次释放：CraftEngine 已先于本插件读完资源，重启一次即可。
-  first-install-hint: "<yellow>资源包刚首次释放，CraftEngine 还没加载它；重启服务器一次即可。</yellow>"
-  # 资源包早已存在仍未就绪时的修复步骤。
-  not-ready-hint: "<yellow>修复：确认 <white>plugins/CraftEngine/resources/betternether/</white> 存在，CraftEngine 的 <white>misc.delay-configuration-load</white> 为 <white>false</white>，然后完整重启。</yellow>"
 
 # ------------------------------------------------------------------------------
 # 帮助屏：/betternether 与 /betternether help 渲染完全一致。

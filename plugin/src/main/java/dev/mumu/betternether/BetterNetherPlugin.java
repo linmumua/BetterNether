@@ -158,13 +158,13 @@ public final class BetterNetherPlugin extends JavaPlugin {
                     Placeholder.unparsed("released", String.valueOf(report.released())),
                     Placeholder.unparsed("skipped", String.valueOf(report.skipped())));
             if (report.firstInstall()) {
-                getComponentLogger().info(texts().get("pack.first-install", resolver));
+                getComponentLogger().info(texts().get("console.pack-first-install", resolver));
             } else if (report.changed()) {
-                getComponentLogger().info(texts().get("pack.completed", resolver));
+                getComponentLogger().info(texts().get("console.pack-completed", resolver));
             } else if (report.skipped() > 0) {
-                getComponentLogger().info(texts().get("pack.unchanged", resolver));
+                getComponentLogger().info(texts().get("console.pack-unchanged", resolver));
             } else {
-                getComponentLogger().warn(texts().get("pack.no-files", resolver));
+                getComponentLogger().warn(texts().get("console.pack-no-files", resolver));
             }
             return report;
         } catch (IOException error) {
@@ -190,7 +190,7 @@ public final class BetterNetherPlugin extends JavaPlugin {
         }
         BlockBreakdownListener listener = new BlockBreakdownListener(this);
         getServer().getPluginManager().registerEvents(listener, this);
-        getComponentLogger().info(texts().get("listeners.breakdown-registered",
+        getComponentLogger().info(texts().get("console.breakdown",
                 Placeholder.unparsed("count", String.valueOf(listener.size()))));
     }
 
@@ -207,7 +207,7 @@ public final class BetterNetherPlugin extends JavaPlugin {
         }
         BlockShapeOnPlaceListener listener = new BlockShapeOnPlaceListener(this);
         getServer().getPluginManager().registerEvents(listener, this);
-        getComponentLogger().info(texts().get("listeners.shape-registered",
+        getComponentLogger().info(texts().get("console.shape",
                 Placeholder.unparsed("count", String.valueOf(listener.size()))));
     }
 
@@ -232,13 +232,13 @@ public final class BetterNetherPlugin extends JavaPlugin {
         boolean started = listener.start();
         NetherConfig current = live.get() == null ? NetherConfig.DEFAULTS : live.get().config();
         Component status = started
-                ? texts().get("listeners.vine-growth-started",
+                ? texts().get("console.vine-on",
                         Placeholder.unparsed("interval", String.valueOf(current.vineGrowthIntervalTicks())),
                         Placeholder.unparsed("attempts", String.valueOf(current.vineGrowthAttempts())),
                         Placeholder.unparsed("chance", String.valueOf(current.vineGrowthChance())),
                         Placeholder.unparsed("max-length", String.valueOf(current.vineMaxLength())))
-                : texts().get("listeners.vine-growth-idle");
-        getComponentLogger().info(texts().get("listeners.vine-growth-registered",
+                : texts().get("console.vine-off");
+        getComponentLogger().info(texts().get("console.vine",
                 Placeholder.component("status", status)));
     }
 
@@ -292,8 +292,8 @@ public final class BetterNetherPlugin extends JavaPlugin {
         if (generatorRefusal != null) {
             boolean justReleased = startupPack != null && startupPack.firstInstall();
             getComponentLogger().warn(texts().get(justReleased
-                    ? "craftengine.first-install-hint" : "craftengine.not-ready-hint"));
-            getComponentLogger().warn(texts().get("generator.paused"));
+                    ? "console.ce-first-install-hint" : "console.ce-not-ready-hint"));
+            getComponentLogger().warn(texts().get("console.paused"));
         }
 
         // 植物失去支撑时跟着掉落。CE 的支撑行为只会把方块变回空气，「掉落」在 YAML 层表达不了，
@@ -334,7 +334,7 @@ public final class BetterNetherPlugin extends JavaPlugin {
         registerCommands();
 
         if (generatorRefusal == null) {
-            getComponentLogger().info(texts().get("plugin.enabled",
+            getComponentLogger().info(texts().get("console.enabled",
                     Placeholder.unparsed("biomes", String.valueOf(biomes.declared().size()))));
         }
     }
@@ -351,7 +351,7 @@ public final class BetterNetherPlugin extends JavaPlugin {
         }
         // Async work that is still queued must not run against a disabled plugin.
         Bukkit.getAsyncScheduler().cancelTasks(this);
-        getComponentLogger().info(texts().get("plugin.disabled"));
+        getComponentLogger().info(texts().get("console.disabled"));
     }
 
     /**
@@ -447,18 +447,18 @@ public final class BetterNetherPlugin extends JavaPlugin {
      */
     private @Nullable String craftEngineRefusal() {
         if (getServer().getPluginManager().getPlugin("CraftEngine") == null) {
-            getComponentLogger().error(texts().get("craftengine.missing"));
-            return plain("craftengine.missing");
+            getComponentLogger().error(texts().get("console.ce-missing"));
+            return plain("console.ce-missing");
         }
         if (!getServer().getPluginManager().isPluginEnabled("CraftEngine")) {
-            getComponentLogger().error(texts().get("craftengine.missing"));
-            return plain("craftengine.missing");
+            getComponentLogger().error(texts().get("console.ce-missing"));
+            return plain("console.ce-missing");
         }
         List<String> missing = missingContent();
         if (!missing.isEmpty()) {
             TagResolver resolver = Placeholder.unparsed("missing", String.join(", ", missing));
-            getComponentLogger().error(texts().get("craftengine.not-ready", resolver));
-            return plain("craftengine.not-ready", resolver);
+            getComponentLogger().error(texts().get("console.ce-not-ready", resolver));
+            return plain("console.ce-not-ready", resolver);
         }
         return null;
     }

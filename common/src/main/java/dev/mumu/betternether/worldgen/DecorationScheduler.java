@@ -139,11 +139,11 @@ public final class DecorationScheduler {
             Map<String, List<CompiledFeature>> data = loader.load();
             // 统计（原版分工 / 显式 skip / 占位数量）走 INFO：它们不是缺口，是账本。
             // 真缺口仍在下面走 WARN —— 这条分界线不能混，否则 WARN 会被日常噪声淹没。
-            for (String stat : loader.stats()) {
-                org.bukkit.Bukkit.getLogger().info("世界装饰装载：" + stat);
+            if (!loader.stats().isEmpty()) {
+                org.bukkit.Bukkit.getLogger().info("[BetterNether] 装饰特征：" + String.join("，", loader.stats()));
             }
             for (String note : loader.notes()) {
-                WorldgenWarnings.warn("世界装饰装载：" + note);
+                WorldgenWarnings.warn("[BetterNether] 装饰特征：" + note);
             }
             return new DecorationScheduler(placement, data);
         } catch (IllegalStateException error) {

@@ -265,17 +265,11 @@ public final class CraftEngineLookup {
      */
     static String missingPropertyMessage(String id, String property, MissingPropertyDiagnosis diagnosis) {
         String applied = "仅忽略该属性，其他已支持属性仍照常应用。";
+        String head = "[BetterNether] " + id + " 缺少属性 " + property + "：";
         return switch (diagnosis) {
-            case IGNORED_RUNTIME_ONLY -> "CraftEngine 方块 " + id + " 没有属性 " + property
-                    + "：该属性是上游的纯运行时属性，不参与模型变体；忽略它不改变形状，"
-                    + "但不代表已复刻其生长或衰减行为。"
-                    + applied;
-            case UNPORTED -> "CraftEngine 方块 " + id + " 没有属性 " + property
-                    + "：该属性尚未移植，上游这一项的行为/外观没有等价物，不能当作等价处理。"
-                    + applied;
-            case UNKNOWN -> "CraftEngine 方块 " + id + " 没有属性 " + property
-                    + "：尚未核实它是否影响形状，补齐 CE 配置前请按「可能与上游不同」看待。"
-                    + applied;
+            case IGNORED_RUNTIME_ONLY -> head + "上游纯运行时属性，不改变形状。" + applied;
+            case UNPORTED -> head + "尚未移植，与上游不等价。" + applied;
+            case UNKNOWN -> head + "未核实是否影响外观。" + applied;
         };
     }
 

@@ -100,13 +100,13 @@ public final class PackInstaller {
             deleteQuietly(staging);
             throw error;
         }
-        log.info("CraftEngine 资源包 '" + label + "' 首次安装完成，写入 " + counts.released + " 个文件。");
+        log.fine("CraftEngine 资源包 '" + label + "' 首次安装完成，写入 " + counts.released + " 个文件。");
         return new Result(true, counts.released, counts.skipped, counts.failed);
     }
 
     private Result complete(Path target, Source source) throws IOException {
         Counts counts = copyInto(source, target, true);
-        log.info("CraftEngine 资源包 '" + label + "' 已存在，仅补缺失：新增 " + counts.released
+        log.fine("CraftEngine 资源包 '" + label + "' 已存在，仅补缺失：新增 " + counts.released
                 + "，跳过 " + counts.skipped + "，失败 " + counts.failed + "。");
         return new Result(false, counts.released, counts.skipped, counts.failed);
     }

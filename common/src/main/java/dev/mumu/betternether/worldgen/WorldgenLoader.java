@@ -253,12 +253,10 @@ public final class WorldgenLoader {
             compiled.put(entry.getKey(), List.copyOf(list));
         }
         if (!nativePlacedIds.isEmpty()) {
-            stats.add("worldgen: " + nativePlacedIds.size()
-                    + " 条原版条目标记为 native（由原生 FeaturePlacer/datapack 执行，本装载器不编译）");
+            stats.add(nativePlacedIds.size() + " 条交给原版执行");
         }
         if (explicitSkips > 0) {
-            stats.add("worldgen: " + explicitSkips + " 条条目按清单的 skip:true 显式占位"
-                    + "（由其它 owner 执行或已移除），不编译、不计失败，下标已保留");
+            stats.add(explicitSkips + " 条按清单跳过（skip:true）");
         }
         if (failed > 0) {
             // 具体点名：这类条目清单里没有 skip，意思是「本移植负责」，编译失败必须能定位到文件。
@@ -266,8 +264,7 @@ public final class WorldgenLoader {
                     + "这些特征不会放置）：" + firstFew(failedIds));
         }
         if (placeholders > 0) {
-            stats.add("worldgen: " + placeholders + " 条条目作为占位保留（显式 skip / 编译失败），"
-                    + "用于对齐全局 featureIndex");
+            stats.add(placeholders + " 个占位槽");
         }
         return Map.copyOf(compiled);
     }

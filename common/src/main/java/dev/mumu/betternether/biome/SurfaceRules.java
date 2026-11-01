@@ -642,8 +642,7 @@ public final class SurfaceRules {
                         compiler.usesSurfaceDepth(key), compiler.materials()));
             }
             if (compiler.bedrockDropped > 0) {
-                notes.add("丢弃 " + compiler.bedrockDropped
-                        + " 条基岩规则（上下基岩板由 generateBedrock 负责）");
+                notes.add("跳过 " + compiler.bedrockDropped + " 条基岩规则（基岩由生成器自行铺设）");
             }
             // The vanilla half. Its materials share the palette and its noise ids share the pre-warm
             // list, because one pass evaluates both rule sets.
